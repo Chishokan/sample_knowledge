@@ -10,7 +10,7 @@
  * ログ機能が未設定なら何もしない。ログ失敗はチャットを壊さない。
  */
 import { NextRequest, NextResponse, after } from 'next/server';
-import { generateReply, type ChatMessage, type Role } from '@/lib/chat';
+import { streamReply, type ChatMessage, type Role } from '@/lib/chat';
 import { classifyCategory } from '@/lib/classify';
 import { isSheetsLoggingEnabled, logConversation } from '@/lib/sheets';
 import type { Region } from '@/lib/kb';
@@ -70,37 +70,12 @@ export async function POST(req: NextRequest) {
   const lang: Lang = VALID_LANGS.includes(langRaw as Lang) ? (langRaw as Lang) : 'ja';
   const bilingual = bilingualRaw === true;
 
+  const typedMessages = messages as ChatMessage[];
+
+  // ストリームを開始する。APIキー未設定などの設定エラーはここで同期的に投げられる。
+  let stream: ReturnType<typeof streamReply>;
   try {
-    const typedMessages = messages as ChatMessage[];
-    const { reply } = await generateReply({ messages: typedMessages, region, lang, bilingual });
-
-    // 応答を返したあとに、分類＋スプレッドシートへのログ保存を非同期で行う。
-    if (isSheetsLoggingEnabled()) {
-      const question = typedMessages[typedMessages.length - 1].content;
-      const sid = typeof sessionId === 'string' ? sessionId : '';
-      after(async () => {
-        const category = await classifyCategory(question);
-        try {
-          await logConversation({
-            sessionId: sid,
-            region,
-            lang,
-            easyJp: lang === 'ja-easy',
-            bilingual: bilingual && lang !== 'ja' && lang !== 'ja-easy',
-            category,
-            question,
-            answer: reply,
-          });
-        } catch (logErr) {
-          console.error(
-            '[/api/chat] sheets log failed:',
-            logErr instanceof Error ? logErr.message : logErr
-          );
-        }
-      });
-    }
-
-    return NextResponse.json({ reply });
+    stream = streamReply({ messages: typedMessages, region, lang, bilingual });
   } catch (err) {
     const message = err instanceof Error ? err.message : 'unknown error';
     console.error('[/api/chat] error:', message);
@@ -114,4 +89,65 @@ export async function POST(req: NextRequest) {
       { status: isConfigError ? 503 : 502 }
     );
   }
+
+  const encoder = new TextEncoder();
+  let full = ''; // 後段のログ保存用に全文を蓄積する。
+
+  const responseStream = new ReadableStream<Uint8Array>({
+    async start(controller) {
+      try {
+        for await (const event of stream) {
+          if (
+            event.type === 'content_block_delta' &&
+            event.delta.type === 'text_delta'
+          ) {
+            full += event.delta.text;
+            controller.enqueue(encoder.encode(event.delta.text));
+          }
+        }
+        controller.close();
+      } catch (err) {
+        console.error(
+          '[/api/chat] stream error:',
+          err instanceof Error ? err.message : err
+        );
+        // 既にヘッダーは送信済みのため、ストリームを終了して受信済み分を活かす。
+        controller.close();
+      }
+    },
+  });
+
+  // 応答を返したあと（ストリーム完了後）に、分類＋スプレッドシートへのログ保存を行う。
+  if (isSheetsLoggingEnabled()) {
+    const question = typedMessages[typedMessages.length - 1].content;
+    const sid = typeof sessionId === 'string' ? sessionId : '';
+    after(async () => {
+      const category = await classifyCategory(question);
+      try {
+        await logConversation({
+          sessionId: sid,
+          region,
+          lang,
+          easyJp: lang === 'ja-easy',
+          bilingual: bilingual && lang !== 'ja' && lang !== 'ja-easy',
+          category,
+          question,
+          answer: full,
+        });
+      } catch (logErr) {
+        console.error(
+          '[/api/chat] sheets log failed:',
+          logErr instanceof Error ? logErr.message : logErr
+        );
+      }
+    });
+  }
+
+  return new Response(responseStream, {
+    headers: {
+      'Content-Type': 'text/plain; charset=utf-8',
+      'Cache-Control': 'no-cache, no-transform',
+      'X-Accel-Buffering': 'no',
+    },
+  });
 }

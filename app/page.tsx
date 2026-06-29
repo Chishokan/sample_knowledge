@@ -75,9 +75,38 @@ export default function App() {
           sessionId: sessionIdRef.current,
         }),
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || L('errNet'));
-      setMessages((m) => [...m, { role: 'assistant', content: data.reply || '…' }]);
+      if (!res.ok || !res.body) {
+        const data = await res.json().catch(() => null);
+        throw new Error(data?.error || L('errNet'));
+      }
+
+      // ストリーミング応答を逐次表示する（体感の待ち時間を短縮）。
+      setMessages((m) => [...m, { role: 'assistant', content: '' }]);
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let acc = '';
+      let started = false;
+      for (;;) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        acc += decoder.decode(value, { stream: true });
+        if (!started) {
+          started = true;
+          setLoading(false); // 最初のトークンが来たらタイピング表示を消す
+        }
+        setMessages((m) => {
+          const copy = m.slice();
+          copy[copy.length - 1] = { role: 'assistant', content: acc };
+          return copy;
+        });
+      }
+      if (!acc) {
+        setMessages((m) => {
+          const copy = m.slice();
+          copy[copy.length - 1] = { role: 'assistant', content: '…' };
+          return copy;
+        });
+      }
     } catch {
       setErr(L('errNet'));
     } finally {
