@@ -6,7 +6,7 @@
       "sasebo",
       "saikai"
     ],
-    "note": "回答はKBとして使用し、KBに無い内容は断定しない。地域別(answer.sasebo/saikai)を持つ項目あり。西海市の回答はプロトタイプ採用の下書き段階で、公開前に西海市の公式情報で要確認。質問ラベルの ne/my は下書き（要・母語話者確認）。"
+    "note": "外国人就業者（外国人材）向けのFAQ。回答はKBとして使用し、KBに無い内容は断定しない。地域別(answer.sasebo/saikai)を持つ項目あり。西海市の回答はプロトタイプ採用の下書き段階で、公開前に西海市の公式情報で要確認。労働関係(仕事カテゴリ)は全国共通の一般的な制度説明にとどめ、個別の金額・判断は勤務先や労働基準監督署等で要確認。質問ラベルの ne/my は下書き（要・母語話者確認）。"
   },
   "faqs": [
     {
@@ -346,73 +346,101 @@
     },
     {
       "id": "faq-023",
-      "category": "学習",
-      "status": "要確認",
-      "question": "JOT（日本語オンラインテスト）はどんな試験ですか？",
+      "category": "仕事",
+      "status": "確認済",
+      "question": "雇用契約と労働条件通知書について知りたいです",
       "questionLoc": {
-        "en": "What kind of test is the JOT (Japanese Online Test)?",
-        "vi": "JOT (Bài thi tiếng Nhật trực tuyến) là kỳ thi như thế nào?",
-        "id": "Tes seperti apa JOT (Japanese Online Test)?",
-        "ne": "JOT (जापानिज अनलाइन टेस्ट) कस्तो परीक्षा हो?",
-        "my": "JOT (ဂျပန်ဘာသာ အွန်လိုင်းစာမေးပွဲ) က ဘယ်လို စာမေးပွဲလဲ။"
+        "en": "I want to know about my employment contract and the working conditions notice.",
+        "vi": "Tôi muốn biết về hợp đồng lao động và bản thông báo điều kiện làm việc.",
+        "id": "Saya ingin tahu tentang kontrak kerja dan surat pemberitahuan kondisi kerja.",
+        "ne": "रोजगार सम्झौता र कार्य अवस्था सूचना (労働条件通知書) बारे जान्न चाहन्छु।",
+        "my": "အလုပ်ခန့်စာချုပ်နှင့် အလုပ်အခြေအနေ အသိပေးစာ အကြောင်း သိချင်ပါတယ်။"
       },
-      "answer": "JOTはコンピューターで受ける（CBT方式）日本語の試験で、顔認証を使い「いつでも・どこでも・何度でも」受けやすいのが特徴です。運営は一般社団法人グローバル共生社会推進機構（GISPA）です。在留資格「留学」の日本語要件（参照枠A2相当）を証明する試験として、JT4以上が国の基準で認められています。ただし「特定技能」や「育成就労」の日本語要件として使えるかは制度上の扱いが別で、現在は特定技能の日本語要件はJFT-BasicまたはJLPT N4以上が基本です。最新の認定状況・申込方法はJOT公式サイト（jot.gispa.jp）と出入国在留管理庁で確認してください。"
+      "answer": "日本で働くときは、会社から「労働条件通知書（または雇用契約書）」をもらえます。そこには給料、働く時間、休日、仕事の内容、契約期間などが書かれています。サインする前に内容をよく確認し、わからないところは遠慮せず質問してください。受け取った書類は必ず保管しておきましょう。日本語が難しいときは、やさしい日本語や母国語での説明を求めても大丈夫です。説明と違う・書類をもらえないなど困ったときは、スタッフや労働基準監督署に相談してください。"
     },
     {
       "id": "faq-024",
-      "category": "学習",
-      "status": "ドラフト可",
-      "question": "特定技能になるために必要な日本語レベルは？",
+      "category": "仕事",
+      "status": "確認済",
+      "question": "最低賃金や給与明細の見方を教えてください",
       "questionLoc": {
-        "en": "What Japanese level is needed for Specified Skilled Worker status?",
-        "vi": "Cần trình độ tiếng Nhật nào để trở thành Kỹ năng đặc định?",
-        "id": "Tingkat bahasa Jepang apa yang dibutuhkan untuk Pekerja Berketerampilan Spesifik?",
-        "ne": "विशेष सीप हुन कुन जापानी स्तर चाहिन्छ?",
-        "my": "သီးခြားကျွမ်းကျင်လုပ်သား ဖြစ်ဖို့ ဘယ် ဂျပန်ဘာသာ အဆင့် လိုအပ်လဲ။"
+        "en": "Please explain the minimum wage and how to read my pay slip.",
+        "vi": "Hãy giải thích mức lương tối thiểu và cách đọc phiếu lương.",
+        "id": "Tolong jelaskan upah minimum dan cara membaca slip gaji.",
+        "ne": "न्यूनतम ज्याला र तलब पर्ची (給与明細) कसरी हेर्ने भन्ने बताइदिनुहोस्।",
+        "my": "အနိမ့်ဆုံးလုပ်ခနှင့် လစာစလစ် ဖတ်နည်းကို ရှင်းပြပေးပါ။"
       },
-      "answer": "特定技能1号では、基本的に「日本語教育の参照枠」A2相当以上が必要です。代表的には国際交流基金日本語基礎テスト（JFT-Basic）や日本語能力試験（JLPT）N4以上の合格で証明できます。"
+      "answer": "日本では地域ごとに「最低賃金」が法律で決まっていて、時給はその金額以上でなければなりません（長崎県の最低賃金額は毎年見直されます。最新額は長崎労働局のサイトで確認できます）。毎月の給料からは、所得税・住民税・社会保険料などが「控除」として引かれ、残った金額が手取りです。「給与明細」に、支給（基本給・残業代など）と控除の内訳が書かれているので、毎月必ず確認しましょう。金額がおかしいと思ったら、給与明細を持って勤務先かスタッフ、労働基準監督署に相談してください。"
     },
     {
       "id": "faq-025",
-      "category": "学習",
-      "status": "ドラフト可",
-      "question": "日本語の勉強は何から始めればいいですか？",
+      "category": "仕事",
+      "status": "確認済",
+      "question": "残業代（割増賃金）はどうなりますか？",
       "questionLoc": {
-        "en": "Where should I start studying Japanese?",
-        "vi": "Nên bắt đầu học tiếng Nhật từ đâu?",
-        "id": "Mulai belajar bahasa Jepang dari mana?",
-        "ne": "जापानी भाषा कहाँबाट सिक्न सुरु गर्ने?",
-        "my": "ဂျပန်စာ ဘာကနေ စလေ့လာရမလဲ။"
+        "en": "How does overtime pay (premium wages) work?",
+        "vi": "Tiền làm thêm giờ (lương phụ trội) được tính thế nào?",
+        "id": "Bagaimana perhitungan upah lembur (upah premium)?",
+        "ne": "ओभरटाइम भत्ता (割増賃金) कसरी हुन्छ?",
+        "my": "အချိန်ပိုလုပ်ခ (割増賃金) ဘယ်လို တွက်သလဲ။"
       },
-      "answer": "まずは生活でよく使う言葉から少しずつ始めるとよいです。アプリの学習機能では、あなたの弱点に合わせた問題で練習できます。目標の試験に合わせて計画を立てましょう。"
+      "answer": "法律で決まった時間（原則1日8時間・週40時間）を超えて働いた場合、会社は割増した残業代を払う必要があります。割増率の目安は、時間外労働は25％以上、深夜（22時〜翌朝5時）は25％以上、法定休日の労働は35％以上です。自分でも働いた時間を記録しておくと安心です。残業代が支払われない・少ないと思うときは、給与明細やタイムカードの記録とあわせて、勤務先かスタッフ、労働基準監督署（佐世保労働基準監督署など）に相談してください。"
     },
     {
       "id": "faq-026",
-      "category": "学習",
+      "category": "仕事",
       "status": "確認済",
-      "question": "技能評価試験の対策はどうすればいいですか？",
+      "question": "労働時間・休憩・休日のルールは？",
       "questionLoc": {
-        "en": "How should I prepare for the skills evaluation test?",
-        "vi": "Nên ôn thi đánh giá kỹ năng thế nào?",
-        "id": "Bagaimana mempersiapkan tes evaluasi keterampilan?",
-        "ne": "सीप मूल्याङ्कन परीक्षाको तयारी कसरी गर्ने?",
-        "my": "ကျွမ်းကျင်မှု အကဲဖြတ် စာမေးပွဲကို ဘယ်လို ပြင်ဆင်ရမလဲ။"
+        "en": "What are the rules for working hours, breaks, and days off?",
+        "vi": "Quy định về giờ làm việc, giờ nghỉ và ngày nghỉ là gì?",
+        "id": "Apa aturan jam kerja, istirahat, dan hari libur?",
+        "ne": "काम गर्ने समय, विश्राम र बिदाका नियम के हुन्?",
+        "my": "အလုပ်ချိန်၊ နားချိန်နှင့် အလုပ်ပိတ်ရက် စည်းမျဉ်းတွေက ဘာတွေလဲ။"
       },
-      "answer": "技能評価試験は分野（介護・外食・建設など）ごとに、担当の省庁や指定された試験団体が実施します。試験の範囲・日程・対策教材は分野によって違います。自分の分野の試験情報は、出入国在留管理庁の「特定技能 試験情報のポータルサイト」や、各分野の試験実施団体のサイトで確認できます。公式の学習教材やサンプル問題で準備しましょう。"
+      "answer": "働く時間は原則として1日8時間・週40時間までが基本です。労働時間が6時間を超えるときは45分以上、8時間を超えるときは60分以上の休憩をとる権利があります。会社は少なくとも週1日（または4週で4日）の休日を与えなければなりません。実際の勤務時間や休日は、雇用契約や就業規則で決まります。契約と違う、休憩や休日がとれないなど、おかしいと感じたら勤務先かスタッフ、労働基準監督署に相談してください。"
     },
     {
       "id": "faq-027",
-      "category": "学習",
+      "category": "仕事",
       "status": "確認済",
-      "question": "試験の申し込みはどうすればいいですか？",
+      "question": "有給休暇（年次有給休暇）はもらえますか？",
       "questionLoc": {
-        "en": "How do I apply for the exams?",
-        "vi": "Cách đăng ký dự thi?",
-        "id": "Bagaimana cara mendaftar ujian?",
-        "ne": "परीक्षाको आवेदन कसरी दिने?",
-        "my": "စာမေးပွဲကို ဘယ်လို လျှောက်ရမလဲ။"
+        "en": "Can I get paid leave (annual paid vacation)?",
+        "vi": "Tôi có được nghỉ phép có lương (phép năm) không?",
+        "id": "Apakah saya bisa mendapat cuti berbayar (cuti tahunan)?",
+        "ne": "तलबी बिदा (वार्षिक तलबी बिदा) पाइन्छ?",
+        "my": "လစာနှင့် ခွင့် (နှစ်စဉ် လစာနှင့်ခွင့်) ရနိုင်ပါသလား။"
       },
-      "answer": "試験ごとに申し込み方法が決まっています。日本語の試験は、JFT-Basic（国際交流基金日本語基礎テスト）が公式サイト jpf.go.jp/jft-basic、JLPT（日本語能力試験）が jlpt.jp、JOTが jot.gispa.jp から申し込みます。分野ごとの技能評価試験は、各試験実施団体のサイト（出入国在留管理庁のポータルから探せます）で申し込みます。"
+      "answer": "半年以上続けて働き、決められた労働日の8割以上出勤した人は、国籍に関係なく「年次有給休暇（有給）」をもらえます。最初は10日で、勤続年数が長くなると日数が増えます。パートやアルバイトでも、働く日数に応じて取得できます。有給は理由を問わず取ることができ、休んでも給料は減りません。取り方は会社のルールに従って前もって申し出ます。取らせてもらえないなど困ったときは、スタッフや労働基準監督署に相談してください。"
+    },
+    {
+      "id": "faq-031",
+      "category": "仕事",
+      "status": "確認済",
+      "question": "仕事中や通勤中にけがをしたら（労災保険）？",
+      "questionLoc": {
+        "en": "What if I get injured at work or commuting? (workers' accident insurance)",
+        "vi": "Nếu bị thương khi làm việc hoặc đi làm thì sao? (bảo hiểm tai nạn lao động)",
+        "id": "Bagaimana jika cedera saat bekerja atau dalam perjalanan kerja? (asuransi kecelakaan kerja)",
+        "ne": "काममा वा आउँदा-जाँदा चोट लागे के गर्ने? (श्रमिक दुर्घटना बीमा 労災)",
+        "my": "အလုပ်ခွင်တွင် သို့မဟုတ် အသွားအပြန်လမ်းတွင် ထိခိုက်ရင်? (လုပ်သား ထိခိုက်မှု အာမခံ 労災)"
+      },
+      "answer": "仕事が原因のけが・病気や、通勤中の事故は「労災保険（労働者災害補償保険）」の対象になります。労災は、会社の規模や雇用形態（正社員・パートなど）に関係なく、働く人すべてが対象です。治療費は原則として自己負担なしで、仕事を休んだ期間の補償もあります。まず安全を確保し、必要なら119番（救急）。そのうえで必ず勤務先に報告してください。健康保険ではなく労災として扱う点に注意します。会社が手続きをしてくれないなど困ったときは、労働基準監督署やスタッフに相談してください。"
+    },
+    {
+      "id": "faq-032",
+      "category": "仕事",
+      "status": "確認済",
+      "question": "職場でのハラスメントや困りごとは誰に相談できますか？",
+      "questionLoc": {
+        "en": "Who can I talk to about harassment or problems at work?",
+        "vi": "Tôi có thể nói chuyện với ai về quấy rối hoặc vấn đề tại nơi làm việc?",
+        "id": "Kepada siapa saya bisa berkonsultasi soal pelecehan atau masalah di tempat kerja?",
+        "ne": "कार्यस्थलमा हुने उत्पीडन वा समस्याबारे कोसँग कुरा गर्न सकिन्छ?",
+        "my": "အလုပ်ခွင်က နှောင့်ယှက်မှု သို့မဟုတ် ပြဿနာများကို ဘယ်သူနဲ့ တိုင်ပင်လို့ရမလဲ။"
+      },
+      "answer": "職場でのいじめ・暴言・パワハラ・セクハラ、賃金の未払い、契約と違う働かせ方などで困ったときは、一人でがまんしないでください。まず画面の「スタッフに相談する」を使うか、公的な相談窓口に連絡できます。労働トラブルは「労働基準監督署」、外国人の生活・仕事の相談は「長崎県外国人相談窓口（多言語）」、国の「外国人在留支援センター（FRESC）」電話相談（0120-76-2029）も利用できます。相談したことを理由に不利に扱うことは法律で禁止されています。"
     },
     {
       "id": "faq-028",

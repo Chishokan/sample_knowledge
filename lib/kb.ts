@@ -9,7 +9,7 @@
  */
 import faqData from '@/data/faq.json';
 
-export type FaqCategory = '生活' | '手続き' | '学習' | 'その他';
+export type FaqCategory = '生活' | '手続き' | '仕事' | 'その他';
 export type FaqStatus = '確認済' | 'ドラフト可' | '要確認';
 export type Region = 'sasebo' | 'saikai';
 
@@ -39,7 +39,7 @@ export function getFaqs(): Faq[] {
 }
 
 /** カテゴリの一覧（分類・表示順）。 */
-export const CATEGORIES: FaqCategory[] = ['生活', '手続き', '学習', 'その他'];
+export const CATEGORIES: FaqCategory[] = ['生活', '手続き', '仕事', 'その他'];
 
 /** 地域に応じた回答テキストを返す。 */
 export function answerFor(faq: Faq, region: Region): string {
