@@ -1,6 +1,6 @@
 # Vercel デプロイ手順（丁寧版）
 
-このアプリ（Next.js 15 + Claude API）を Vercel に公開する手順です。初めての方向けに、つまずきやすい所まで書いています。
+このアプリ（外国人就業者向け 多言語Q&Aチャット / Next.js 15 + Claude API）を Vercel に公開する手順です。初めての方向けに、つまずきやすい所まで書いています。
 
 > ⚠️ **大原則**: `ANTHROPIC_API_KEY` は秘密情報です。
 > - GitHub にコミットしない（`.env` は `.gitignore` 済み）。
@@ -13,7 +13,7 @@
 
 | もの | 説明 |
 | --- | --- |
-| GitHub アカウント | このリポジトリ（`Chishokan/global-AI-chat`）が push 済みであること |
+| GitHub アカウント | このリポジトリ（`Chishokan/sample_knowledge`）が push 済みであること |
 | Vercel アカウント | https://vercel.com で GitHub 連携してサインアップ（無料のHobbyでOK） |
 | Anthropic APIキー | `sk-ant-...` で始まる文字列（取得済み） |
 
@@ -35,35 +35,21 @@ npm run dev
 
 ---
 
-## 2. コードを main ブランチに入れる（本番ブランチの準備）
+## 2. 本番ブランチについて
 
-Vercel は既定で **`main` ブランチを「本番（Production）」** として公開します。
-いまの実装は作業ブランチ `claude/zen-cori-1pmtl7` にあるので、本番にするには `main` に取り込みます。方法は2つ。
+このリポジトリの**デフォルトブランチは `claude/stoic-bell-kpov10`** です。Vercel はデフォルトブランチを **本番（Production）** として公開するため、いまの実装はこのブランチに push するだけで本番デプロイされます（`main` ブランチを作る必要はありません）。
 
-### 方法A: Pull Request 経由（おすすめ・レビュー履歴が残る）
+- `claude/stoic-bell-kpov10` に push / マージ → **本番（Production）** が更新。
+- それ以外のブランチに push → **プレビュー（Preview）URL** が自動生成。
 
-1. GitHub でリポジトリを開く。
-2. `claude/zen-cori-1pmtl7` → `main` への Pull Request を作成。
-3. 内容を確認して **Merge**。
-
-### 方法B: ローカルでマージ
-
-```bash
-git checkout main
-git merge claude/zen-cori-1pmtl7
-git push origin main
-```
-
-> 補足: 作業ブランチのままでも Vercel は **Preview（プレビュー）URL** を自動で発行します。
-> 「とりあえず動かして見たい」なら main へのマージ前でも、ブランチを push した時点でプレビューが見られます。
-> 一般公開する「本番URL」にするには main に入れるのが基本です。
+> 将来 `main` を本番にしたい場合は、GitHub の **Settings → Branches** でデフォルトブランチを `main` に変更するか、Vercel の **Project → Settings → Git** で Production Branch を変更してください。
 
 ---
 
 ## 3. Vercel にプロジェクトをインポート
 
 1. https://vercel.com/new を開く。
-2. 「Import Git Repository」で **`Chishokan/global-AI-chat`** を選び **Import**。
+2. 「Import Git Repository」で **`Chishokan/sample_knowledge`** を選び **Import**。
    - 初回はGitHub連携の許可（リポジトリへのアクセス）を求められます。許可してください。
 3. 設定画面が出ます（次のステップで触ります）。
 
@@ -103,7 +89,7 @@ git push origin main
 
 1. 設定を確認して **「Deploy」** をクリック。
 2. ビルドログが流れます（`next build`）。1〜2分で完了。
-3. 「Congratulations」と表示され、本番URL（例: `https://global-ai-chat.vercel.app`）が発行されます。
+3. 「Congratulations」と表示され、本番URL（例: `https://sample-knowledge.vercel.app`）が発行されます。
 
 URLを開いて、チャットに質問を入力 → 応答が返ればデプロイ成功です。
 
@@ -129,6 +115,7 @@ URLを開いて、チャットに質問を入力 → 応答が返ればデプロ
 - [ ] 日本語で質問 → 日本語で回答が返る
 - [ ] 英語で質問 → 英語で回答が返る
 - [ ] 「やさしい日本語」ONで、回答がやさしくなる
+- [ ] 「仕事」タブの質問（残業代・有給・労災など）→ 制度説明＋勤務先/労基署への確認案内が返る
 - [ ] KBにない質問 → 断定せず「スタッフに確認」へ誘導される
 - [ ] 「スタッフに相談する」ボタンで案内が出る
 

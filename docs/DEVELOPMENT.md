@@ -34,7 +34,7 @@ node -v       # v22.x になっていればOK
 
 ```bash
 git clone <repoURL>
-cd global-ai-chat
+cd sample_knowledge
 nvm use
 npm install
 ```
@@ -51,7 +51,7 @@ Vercel に設定済みの変数をそのままローカルへ取り込めます�
 
 ```bash
 vercel login          # 初回のみ
-vercel link           # このフォルダを Vercel プロジェクト global-ai-chat に紐づけ
+vercel link           # このフォルダを Vercel プロジェクト sample_knowledge に紐づけ
 vercel env pull .env.local   # Development 環境の変数を .env.local に書き出す
 ```
 
