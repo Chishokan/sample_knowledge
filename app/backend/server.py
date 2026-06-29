@@ -31,8 +31,8 @@ ROOT_DIR = BACKEND_DIR.parent.parent
 CORPUS_PATH = BACKEND_DIR / "corpus.json"
 FRONTEND_PATH = ROOT_DIR / "app" / "frontend" / "index.html"
 
-# 環境変数で上書き可能。既定モデルは claude-opus-4-8。
-MODEL = os.environ.get("MODEL", "claude-opus-4-8")
+# 環境変数で上書き可能。既定モデルは claude-opus-4-6。
+MODEL = os.environ.get("MODEL", "claude-opus-4-6")
 MAX_TOKENS = int(os.environ.get("MAX_TOKENS", "2048"))
 APP_PASSWORD = os.environ.get("APP_PASSWORD", "").strip()
 
@@ -57,14 +57,15 @@ def build_system_prompt(corpus: dict) -> str:
     parts.append(
         "あなたは「サンプル株式会社」の就業規則アシスタントです。"
         "以下に示す社内規程（すべて架空企業向けのサンプルデータ）のみを根拠として、"
-        "従業員からの質問に日本語で回答してください。\n\n"
+        "従業員からの質問に回答してください。\n\n"
         "回答のルール:\n"
         "1. 必ず以下の規程本文を根拠にすること。一般論や推測で答えないこと。\n"
         "2. 回答には根拠となった規程名と条番号（例: 就業規則 第11条）を必ず明示すること。\n"
         "3. 規程に該当する記載が見つからない場合は、無理に推測せず正直に「規程には記載が"
         "見つからないため不明です」と答えること。\n"
         "4. これはサンプルデータによるデモであり、実際の判断は人事・専門家へ確認するよう"
-        "必要に応じて促すこと。\n\n"
+        "必要に応じて促すこと。\n"
+        "5. 出力言語は、別途与えられる「出力言語の指定」に従うこと。\n\n"
         "===== 社内規程（サンプルデータ）ここから =====\n"
     )
 
@@ -76,6 +77,30 @@ def build_system_prompt(corpus: dict) -> str:
 
     parts.append("\n===== 社内規程（サンプルデータ）ここまで =====\n")
     return "".join(parts)
+
+
+# 日本語を表す表記のゆれ（これらが指定された場合は日本語のみで回答する）
+JAPANESE_ALIASES = {"日本語", "ja", "ja-jp", "japanese", "jp"}
+
+
+def build_language_directive(language: str) -> str:
+    """選択言語に応じた「出力言語の指定」を生成する。
+
+    システムプロンプト本体（規程全文）はキャッシュを効かせるため固定し、
+    言語ごとに変化するこの小さな指定だけを別ブロックとして付与する。
+    """
+    lang = (language or "").strip()
+    if not lang or lang.lower() in JAPANESE_ALIASES:
+        return "【出力言語の指定】\n回答は日本語で出力してください。"
+
+    return (
+        "【出力言語の指定】\n"
+        f"今回の回答は、必ず「{lang}」と「日本語」の2言語で出力してください。\n"
+        f"- まず {lang} で回答し、その後に「---」の区切り行に続けて日本語で回答してください。\n"
+        "- どちらの言語の回答でも、根拠となる規程名・条番号を明示してください"
+        "（規程名・条番号は原文の日本語表記のままで構いません）。\n"
+        "- 規程に該当が見つからない場合は、両方の言語で正直に「不明」である旨を回答してください。"
+    )
 
 
 CORPUS = load_corpus()
@@ -108,6 +133,8 @@ class ChatMessage(BaseModel):
 
 class ChatRequest(BaseModel):
     messages: list[ChatMessage]
+    # 出力言語。未指定または日本語系の場合は日本語のみで回答する。
+    language: str = "日本語"
 
 
 # ---------------------------------------------------------------------------
@@ -148,18 +175,25 @@ def chat(req: ChatRequest, x_app_password: str | None = Header(default=None)):
     if not api_messages or api_messages[-1]["role"] != "user":
         raise HTTPException(status_code=400, detail="最後のメッセージは user である必要があります。")
 
+    language_directive = build_language_directive(req.language)
+
     def event_stream():
         try:
             with client.messages.stream(
                 model=MODEL,
                 max_tokens=MAX_TOKENS,
-                # システムプロンプトに prompt caching を付与（安定した長い前置きを再利用）
+                # 規程全文の前置きはキャッシュ対象（安定）。言語指定は変化するため
+                # キャッシュ区切りより後ろの別ブロックに置く。
                 system=[
                     {
                         "type": "text",
                         "text": SYSTEM_PROMPT,
                         "cache_control": {"type": "ephemeral"},
-                    }
+                    },
+                    {
+                        "type": "text",
+                        "text": language_directive,
+                    },
                 ],
                 messages=api_messages,
             ) as stream:

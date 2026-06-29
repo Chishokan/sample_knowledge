@@ -51,10 +51,32 @@
     border-radius: 999px;
     white-space: nowrap;
   }
+  .header-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
   .header-note {
     font-size: 12px;
     color: var(--muted);
-    margin-left: auto;
+  }
+  .lang-select {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .lang-select select {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 5px 8px;
+    font-size: 13px;
+    font-family: inherit;
+    background: #fff;
+    color: var(--text);
   }
   main {
     flex: 1;
@@ -173,7 +195,23 @@
   <header>
     <span class="badge">DEMO / サンプルデータ</span>
     <h1>サンプル株式会社 就業規則アシスタント</h1>
-    <span class="header-note" id="headerNote">これはサンプルデータによるデモです</span>
+    <div class="header-right">
+      <div class="lang-select">
+        <label for="lang">出力言語</label>
+        <select id="lang">
+          <option value="日本語">日本語のみ</option>
+          <option value="English">English ＋ 日本語</option>
+          <option value="简体中文">简体中文 ＋ 日本語</option>
+          <option value="繁體中文">繁體中文 ＋ 日本語</option>
+          <option value="한국어">한국어 ＋ 日本語</option>
+          <option value="Tiếng Việt">Tiếng Việt ＋ 日本語</option>
+          <option value="Español">Español ＋ 日本語</option>
+          <option value="Português">Português ＋ 日本語</option>
+          <option value="Français">Français ＋ 日本語</option>
+        </select>
+      </div>
+      <span class="header-note" id="headerNote">これはサンプルデータによるデモです</span>
+    </div>
   </header>
 
   <main>
@@ -215,6 +253,7 @@ const examplesEl = document.getElementById("examples");
 const pwRow = document.getElementById("pwRow");
 const pwEl = document.getElementById("pw");
 const headerNote = document.getElementById("headerNote");
+const langEl = document.getElementById("lang");
 
 // 会話履歴（API 送信用）
 const history = [];
@@ -297,7 +336,7 @@ async function send() {
     const res = await fetch("/api/chat", {
       method: "POST",
       headers,
-      body: JSON.stringify({ messages: history }),
+      body: JSON.stringify({ messages: history, language: langEl.value }),
     });
 
     if (!res.ok) {
