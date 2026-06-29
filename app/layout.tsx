@@ -2,9 +2,9 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: '日本生活サポート チャット',
+  title: '日本就業サポートチャット',
   description:
-    '佐世保エリアで働き・学ぶ外国人材のための、多言語Q&Aチャット（生活・手続きの質問にやさしく回答）。',
+    '佐世保エリアで働く外国人就業者のための、多言語Q&Aチャット（生活・仕事・手続きの質問にやさしく回答）。',
 };
 
 export const viewport: Viewport = {

@@ -124,29 +124,32 @@ export default function App() {
           flexDirection: 'column',
         }}
       >
+        {/* ===== Brand bar: app name ===== */}
+        <div
+          style={{
+            padding: '11px 14px',
+            background: 'var(--accent)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 8,
+          }}
+        >
+          <span style={{ fontSize: 16, lineHeight: 1 }}>🧭</span>
+          <span style={{ fontWeight: 800, fontSize: 14.5, color: '#fff', letterSpacing: '.01em' }}>
+            日本就業サポートチャット
+          </span>
+        </div>
+
         {/* ===== Top bar: region + language ===== */}
         <div
           style={{
-            padding: '12px 14px',
+            padding: '10px 14px',
             borderBottom: '1px solid var(--line)',
             display: 'flex',
             alignItems: 'center',
             gap: 8,
           }}
         >
-          <div
-            style={{
-              width: 34,
-              height: 34,
-              borderRadius: 11,
-              background: 'var(--accent-soft)',
-              display: 'grid',
-              placeItems: 'center',
-              fontSize: 17,
-            }}
-          >
-            🧭
-          </div>
           <div style={{ display: 'flex', background: '#e7eefa', borderRadius: 999, padding: 3 }}>
             {REGIONS.map((r) => (
               <button
