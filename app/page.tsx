@@ -338,9 +338,9 @@ export default function App() {
                 </div>
               </div>
               <div style={{ border: '1px solid var(--line)', borderRadius: 14, padding: 14, marginBottom: 12 }}>
-                <div style={{ fontWeight: 700, fontSize: 12.5, color: accent, marginBottom: 6 }}>🏥 {L('med')}</div>
+                <div style={{ fontWeight: 700, fontSize: 12.5, color: accent, marginBottom: 6 }}>🩹 {L('med')}</div>
                 <div style={{ fontSize: 13, lineHeight: 1.7, color: 'var(--ink)' }}>
-                  {region === 'saikai' ? L('medSaikai') : L('medSasebo')}
+                  {L('firstAid')}
                 </div>
               </div>
               <div style={{ border: '1px solid var(--line)', borderRadius: 14, padding: 14, marginBottom: 12 }}>
