@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Noto+Sans:wght@400;600&display=swap');
 
 :root {
-  --bg: #fbf4ea;
+  --bg: #eef3fb;
   --card: #fff;
-  --ink: #2c2a33;
-  --muted: #8a8377;
-  --line: #ece0cf;
-  --accent: #e8772e;
-  --accent-soft: #fbe3ce;
-  --saikai: #1f8e78;
+  --ink: #1e293b;
+  --muted: #6b7a90;
+  --line: #d7e2f2;
+  --accent: #2563eb;
+  --accent-soft: #dbe8fe;
+  --saikai: #0e7490;
 }
 
 * {

@@ -118,7 +118,7 @@ export default function App() {
           background: 'var(--card)',
           borderRadius: 26,
           border: '1px solid var(--line)',
-          boxShadow: '0 24px 60px -28px rgba(80,50,20,.45)',
+          boxShadow: '0 24px 60px -28px rgba(20,45,95,.42)',
           overflow: 'hidden',
           display: 'flex',
           flexDirection: 'column',
@@ -147,7 +147,7 @@ export default function App() {
           >
             🧭
           </div>
-          <div style={{ display: 'flex', background: '#F3ECE0', borderRadius: 999, padding: 3 }}>
+          <div style={{ display: 'flex', background: '#e7eefa', borderRadius: 999, padding: 3 }}>
             {REGIONS.map((r) => (
               <button
                 key={r.code}
@@ -200,7 +200,7 @@ export default function App() {
         {/* ===== Body ===== */}
         <div
           ref={scrollRef}
-          style={{ flex: 1, overflowY: 'auto', background: 'linear-gradient(180deg,#fff,#FFFBF5)' }}
+          style={{ flex: 1, overflowY: 'auto', background: 'linear-gradient(180deg,#fff,#f4f8ff)' }}
         >
           {tab === 'chat' && (
             <div style={{ padding: 18 }}>
@@ -219,7 +219,7 @@ export default function App() {
                         style={{
                           fontSize: 11,
                           color: 'var(--muted)',
-                          background: '#F3ECE0',
+                          background: '#e7eefa',
                           padding: '3px 10px',
                           borderRadius: 999,
                         }}
@@ -471,7 +471,7 @@ export default function App() {
                   fontSize: 11.5,
                   color: 'var(--muted)',
                   lineHeight: 1.6,
-                  background: '#FAF6EF',
+                  background: '#eef4fd',
                   borderRadius: 10,
                   padding: 12,
                 }}
@@ -510,7 +510,7 @@ export default function App() {
                   fontSize: 13.5,
                   color: 'var(--ink)',
                   outline: 'none',
-                  background: '#FFFCF8',
+                  background: '#f8fbff',
                   maxHeight: 96,
                 }}
               />
