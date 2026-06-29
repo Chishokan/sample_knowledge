@@ -7,7 +7,7 @@
 import { getAnthropic, CHAT_MODEL } from '@/lib/claude';
 import { buildChatSystemPrompt } from '@/lib/prompts';
 import { buildKnowledgeBase, type Region } from '@/lib/kb';
-import { regionName, type Lang } from '@/lib/i18n';
+import { type Lang } from '@/lib/i18n';
 
 export type Role = 'user' | 'assistant';
 
@@ -45,7 +45,6 @@ export async function generateReply(
   const system = buildChatSystemPrompt({
     knowledgeBase: buildKnowledgeBase(region),
     lang,
-    regionName: regionName(region),
     bilingual,
   });
 

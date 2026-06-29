@@ -1,491 +1,321 @@
 {
   "_meta": {
-    "source": "Google Sheets「FAQ」シート（人間が編集する正本）。本ファイルはそこからエクスポートしたリポジトリ内の正本。",
+    "source": "造船業向けサンプル就業規則・安全衛生ナレッジ（デモ用）。Google ドキュメント Part1〜3 を元に作成。",
     "updated": "2026-06",
-    "regions": [
-      "sasebo",
-      "saikai"
-    ],
-    "note": "外国人就業者（外国人材）向けのFAQ。回答はKBとして使用し、KBに無い内容は断定しない。地域別(answer.sasebo/saikai)を持つ項目あり。西海市の回答はプロトタイプ採用の下書き段階で、公開前に西海市の公式情報で要確認。労働関係(仕事カテゴリ)は全国共通の一般的な制度説明にとどめ、個別の金額・判断は勤務先や労働基準監督署等で要確認。質問ラベルの ne/my は下書き（要・母語話者確認）。"
+    "note": "架空の「サンプル造船株式会社」向けのデモ用ナレッジ。回答はKBとして使用し、KBに無い内容は断定しない。金額・日程・個別の判断は最新の社内規程や現場の責任者・担当者で要確認（特に status: 要確認 の項目）。安全・資格に関わる内容（玉掛け・クレーン・溶接・高所作業など）は、有資格者以外が行わないよう必ず案内する。questionLoc は en/vi/id を用意（ne/my は en にフォールバック・要・母語話者確認）。"
   },
   "faqs": [
     {
       "id": "faq-001",
-      "category": "生活",
+      "category": "就業規則",
       "status": "確認済",
-      "question": "ゴミの分別の方法を教えてください",
+      "question": "陸上作業員の労働時間と休日はどうなっていますか？",
       "questionLoc": {
-        "en": "How do I sort my garbage?",
-        "vi": "Cách phân loại rác như thế nào?",
-        "id": "Bagaimana cara memilah sampah?",
-        "ne": "फोहोर कसरी छुट्याउने?",
-        "my": "အမှိုက်ကို ဘယ်လို ခွဲခြားရမလဲ။"
+        "en": "What are the working hours and days off for shipyard (land) workers?",
+        "vi": "Giờ làm việc và ngày nghỉ của công nhân trên bờ (xưởng) thế nào?",
+        "id": "Bagaimana jam kerja dan hari libur untuk pekerja darat (galangan)?"
       },
-      "answer": {
-        "sasebo": "佐世保市ではゴミを「燃やせるごみ」「燃やせないごみ」「資源物（缶・びん・ペットボトル・古紙・古布・蛍光管・乾電池など）」に分けます。「燃やせるごみ」「燃やせないごみ」は市の指定ごみ袋に入れて出します。資源物は指定袋ではなく、品目ごとに透明か半透明の中身が見える袋に入れて出します。くわしい分け方は「佐世保市ごみ収集カレンダー・分別表」で確認できます（英語・中国語・韓国語・ベトナム語・ミャンマー語・ネパール語の外国語版もあります）。",
-        "saikai": "西海市ではゴミを「もえるごみ」「もえないごみ」「資源ごみ（缶・びん・ペットボトル・古紙・古布など）」に分けます。もえる・もえないごみは市の指定ごみ袋で出します（市外の指定袋は使えません）。資源ごみや処理施設への持ち込みは中身が見える透明・半透明の袋に入れます。分け方や収集日は、環境政策課または各総合支所で配られる「ごみ収集カレンダー」で自分の地区を確認してください。"
-      }
+      "answer": "陸上作業員（労働基準法が適用される従業員）の所定労働時間は1日8時間・1週40時間です。年次有給休暇は法令に従って付与され、労使協定があれば時間単位での取得が認められる場合があります。詳しい運用は就業規則と現場の指示で確認してください。"
     },
     {
       "id": "faq-002",
-      "category": "生活",
+      "category": "就業規則",
       "status": "確認済",
-      "question": "ゴミはいつ、どこに出せばいいですか？",
+      "question": "試用期間はありますか？",
       "questionLoc": {
-        "en": "When and where do I put out the garbage?",
-        "vi": "Khi nào và ở đâu để đổ rác?",
-        "id": "Kapan dan di mana membuang sampah?",
-        "ne": "फोहोर कहिले र कहाँ निकाल्ने?",
-        "my": "အမှိုက်ကို ဘယ်အချိန် ဘယ်နေရာ ထုတ်ရမလဲ။"
+        "en": "Is there a probationary period?",
+        "vi": "Có thời gian thử việc không?",
+        "id": "Apakah ada masa percobaan?"
       },
-      "answer": {
-        "sasebo": "決められた収集日の朝8時までに、決められた場所（ごみステーション）に出します。収集日や場所は地区ごとに違うので、市の「ごみ収集カレンダー・分別表」で自分の地区を必ず確認してください。前日の夜は出さないでください。",
-        "saikai": "決められた収集日の朝8時までに、決められた場所（ごみステーション）に、指定の曜日・分別で出します。収集日や場所は地区ごとに違うので、市の「ごみ収集カレンダー」で自分の地区を必ず確認してください。前日の夜は出さないでください。"
-      }
+      "answer": "新たに採用した人には、採用日から3か月間の試用期間があります。試用期間中に従業員として不適格と認められた場合は解雇されることがありますが、採用後14日を超えて働いた人には労働基準法に基づく解雇予告の手続きが行われます。"
     },
     {
       "id": "faq-003",
-      "category": "生活",
+      "category": "就業規則",
       "status": "確認済",
-      "question": "大きなゴミ（粗大ごみ）はどう捨てますか？",
+      "question": "海上・試運転要員（船員法が適用される人）の労働時間や休日は？",
       "questionLoc": {
-        "en": "How do I dispose of large (bulky) garbage?",
-        "vi": "Cách vứt rác cồng kềnh (rác lớn)?",
-        "id": "Bagaimana membuang sampah besar (sampah berukuran besar)?",
-        "ne": "ठूलो फोहोर (ठूला सामान) कसरी फाल्ने?",
-        "my": "အမှိုက်ကြီး (ပစ္စည်းကြီး) ကို ဘယ်လို စွန့်ပစ်ရမလဲ။"
+        "en": "What are the working hours and days off for sea/sea-trial crew (under the Mariners Act)?",
+        "vi": "Giờ làm việc và ngày nghỉ của thuyền viên/chạy thử (theo Luật Thuyền viên) thế nào?",
+        "id": "Bagaimana jam kerja dan libur untuk awak laut/uji coba (menurut UU Pelaut)?"
       },
-      "answer": {
-        "sasebo": "指定ごみ袋（大・45L）に入らず、60kgを超えないものが「粗大ごみ」です（ソファー・自転車・机・食器棚など）。ごみステーションには出せません。捨て方は2つで、(1)自分でクリーンセンターへ持ち込む、(2)市に申し込んで家まで取りに来てもらう（戸別有料収集）です。戸別収集は「粗大ごみ受付センター」へ電話（0956-46-5300、月～金 8:30～17:00）するか、インターネット（粗大ごみ収集予約システム）で申し込みます。料金は「粗大ごみ処理券」をコンビニ・スーパー等で買って品物に貼ります。1回5点まで。収集日の朝8時30分までに玄関先などに出してください。",
-        "saikai": "指定ごみ袋（45L）に入らない大きなものが「粗大ごみ」です（袋からはみ出すものは小さくても粗大ごみ）。(1)「粗大ごみシール」を貼って収集日の朝8時までにごみステーションに出す、(2)自分で市のごみ処理施設へ持ち込む、の2通り。シールはコンビニ等の指定ごみ袋販売店で買えます。料金や地区ごとの収集日は市の案内で確認してください。"
-      }
+      "answer": "船員法が適用される海上・試運転要員は、原則1日8時間以内・1週40時間以内で働きます（航海の安全確保など臨時の必要時を除く）。1週間に少なくとも1日の休日が与えられます。1週の労働が40時間を超え、休日が1日もなかった場合は「補償休日」が付与されます。"
     },
     {
       "id": "faq-004",
-      "category": "生活",
-      "status": "ドラフト可",
-      "question": "水道・電気・ガスの契約と支払いはどうすればいいですか？",
+      "category": "就業規則",
+      "status": "確認済",
+      "question": "船員として雇われるとき、契約はどうなりますか？",
       "questionLoc": {
-        "en": "How do I set up and pay for water, electricity, and gas?",
-        "vi": "Cách đăng ký và thanh toán nước, điện, ga?",
-        "id": "Bagaimana mendaftar dan membayar air, listrik, dan gas?",
-        "ne": "पानी, बिजुली, ग्यासको जडान र भुक्तानी कसरी गर्ने?",
-        "my": "ရေ၊ မီး၊ ဓာတ်ငွေ့ စာချုပ်နှင့် ငွေပေးချေမှု ဘယ်လို လုပ်ရမလဲ။"
+        "en": "How does the contract work when I am hired as a crew member (mariner)?",
+        "vi": "Khi được thuê làm thuyền viên, hợp đồng như thế nào?",
+        "id": "Bagaimana kontrak saat saya dipekerjakan sebagai awak kapal (pelaut)?"
       },
-      "answer": "引っ越したら、各会社に連絡して契約します。支払いは口座振替・クレジットカード・コンビニ払いなどから選べます。わからないときはスタッフに相談してください。"
+      "answer": "会社が船員を雇い入れるときは、船員法に基づいて雇入契約を結び、契約成立時の書面を船員本人に交付します。その写しは船内にも備え置かれます。"
     },
     {
       "id": "faq-005",
-      "category": "生活",
-      "status": "ドラフト可",
-      "question": "近所づきあいや騒音で気をつけることは？",
+      "category": "就業規則",
+      "status": "確認済",
+      "question": "18歳未満は夜間や危険な作業をしてもよいですか？",
       "questionLoc": {
-        "en": "What should I be careful about with neighbors and noise?",
-        "vi": "Cần lưu ý gì về hàng xóm và tiếng ồn?",
-        "id": "Apa yang perlu diperhatikan soal tetangga dan kebisingan?",
-        "ne": "छिमेकी र हल्लाबारे के ध्यान दिने?",
-        "my": "အိမ်နီးနားနှင့် ဆူညံသံအတွက် ဘာတွေ သတိထားရမလဲ။"
+        "en": "Can workers under 18 do night work or dangerous tasks?",
+        "vi": "Người dưới 18 tuổi có được làm ca đêm hoặc công việc nguy hiểm không?",
+        "id": "Apakah pekerja di bawah 18 tahun boleh kerja malam atau tugas berbahaya?"
       },
-      "answer": "夜は大きな音を出さないようにします。廊下やゴミ置き場などの共用部分はきれいに使います。引っ越しのときは近所にあいさつをすると安心です。"
+      "answer": "満18歳未満の船員は、午後8時から午前5時までの夜間労働、および危険・有害な作業に従事させることはできません。"
     },
     {
       "id": "faq-006",
-      "category": "生活",
-      "status": "ドラフト可",
-      "question": "銀行口座はどうやって作りますか？",
+      "category": "就業規則",
+      "status": "確認済",
+      "question": "一日の作業の流れ（朝礼など）を教えてください。",
       "questionLoc": {
-        "en": "How do I open a bank account?",
-        "vi": "Cách mở tài khoản ngân hàng?",
-        "id": "Bagaimana cara membuka rekening bank?",
-        "ne": "बैङ्क खाता कसरी खोल्ने?",
-        "my": "ဘဏ်အကောင့် ဘယ်လို ဖွင့်ရမလဲ။"
+        "en": "What is the daily work flow (morning assembly, etc.)?",
+        "vi": "Quy trình làm việc trong ngày (họp sáng, v.v.) như thế nào?",
+        "id": "Bagaimana alur kerja harian (apel pagi, dll.)?"
       },
-      "answer": "在留カードと印鑑（またはサイン）などを持って銀行へ行くと口座を作れます。必要なものは銀行によって違うので、行く前に確認すると安心です。"
+      "answer": "8:00ごろ現場に集合して朝礼を行い、ラジオ体操で体をほぐした後、当日の作業内容と安全確認（TBM-KY活動）を実施して現場に入ります。17:00には工具・機材の片付けと3S（整理・整頓・清掃）を行って終業します。"
     },
     {
       "id": "faq-007",
-      "category": "生活",
-      "status": "ドラフト可",
-      "question": "携帯電話（SIM）はどう契約しますか？",
+      "category": "就業規則",
+      "status": "確認済",
+      "question": "休憩時間はいつですか？",
       "questionLoc": {
-        "en": "How do I sign up for a mobile phone (SIM)?",
-        "vi": "Cách đăng ký điện thoại di động (SIM)?",
-        "id": "Bagaimana cara berlangganan ponsel (SIM)?",
-        "ne": "मोबाइल फोन (सिम) कसरी लिने?",
-        "my": "မိုဘိုင်းဖုန်း (SIM) ဘယ်လို စာချုပ်ချုပ်ရမလဲ။"
+        "en": "When are the break times?",
+        "vi": "Giờ nghỉ giải lao là khi nào?",
+        "id": "Kapan waktu istirahat?"
       },
-      "answer": "携帯ショップやオンラインで契約できます。在留カードや支払い方法（クレジットカード・口座）が必要なことが多いです。料金プランは使い方に合わせて選びましょう。"
+      "answer": "午前は10:00ごろから15分程度（水分補給・体調確認）、昼は12:00〜13:00の1時間、午後は作業の進み具合や夏場など季節に応じて適宜小休憩を設けます。休憩は他職種や協力会社との情報交換の場としても活用します。"
     },
     {
       "id": "faq-008",
-      "category": "生活",
-      "status": "ドラフト可",
-      "question": "病気のとき、病院へはどう行きますか？保険証は？",
+      "category": "就業規則",
+      "status": "要確認",
+      "question": "高所作業手当はありますか？",
       "questionLoc": {
-        "en": "When sick, how do I go to a hospital? What about the insurance card?",
-        "vi": "Khi bị bệnh, đến bệnh viện thế nào? Thẻ bảo hiểm thì sao?",
-        "id": "Saat sakit, bagaimana ke rumah sakit? Bagaimana kartu asuransi?",
-        "ne": "बिरामी हुँदा अस्पताल कसरी जाने? बीमा कार्ड नि?",
-        "my": "နာမကျန်းဖြစ်ရင် ဆေးရုံ ဘယ်လို သွားရမလဲ။ အာမခံကတ်ကော။"
+        "en": "Is there a working-at-height allowance?",
+        "vi": "Có phụ cấp làm việc trên cao không?",
+        "id": "Apakah ada tunjangan bekerja di ketinggian?"
       },
-      "answer": "健康保険証を持って病院やクリニックへ行きます。受付で保険証を見せてください。命にかかわる緊急のときは119番（救急車）を呼びます。"
+      "answer": "高所（地上・水面上）で墜落の危険を伴う作業に従事する人には、高さに応じた高所作業手当が支給されます。目安は、10m以上20m未満で日額200〜220円、20m以上30m未満で日額320円、30m以上は日額300〜520円の範囲で別途定めます。具体的な金額は会社の規程で確認してください。"
     },
     {
       "id": "faq-009",
-      "category": "生活",
-      "status": "確認済",
-      "question": "夜間・休日に具合が悪いときはどうすればいいですか？",
+      "category": "就業規則",
+      "status": "要確認",
+      "question": "社員寮や社宅はありますか？",
       "questionLoc": {
-        "en": "What if I feel ill at night or on a holiday?",
-        "vi": "Nếu bị ốm vào ban đêm hoặc ngày lễ thì sao?",
-        "id": "Bagaimana jika sakit pada malam hari atau hari libur?",
-        "ne": "राति वा बिदाको दिन बिसन्चो भए के गर्ने?",
-        "my": "ညဘက် သို့မဟုတ် ရုံးပိတ်ရက် နေမကောင်းရင် ဘယ်လို လုပ်ရမလဲ။"
+        "en": "Is there a company dormitory or housing?",
+        "vi": "Có ký túc xá hoặc nhà ở của công ty không?",
+        "id": "Apakah ada asrama atau perumahan perusahaan?"
       },
-      "answer": {
-        "sasebo": "夜間や休日は「佐世保市立急病診療所」で応急の診察が受けられます。場所は佐世保市高砂町5番1号（中央保健福祉センター「すこやかプラザ」1階）、電話0956-25-3352。診療時間は、月～土（祝日・年末年始を除く）が夜20:00～23:00（内科・小児科）、日曜・祝日・年末年始が10:00～18:00（内科・小児科・外科）です。健康保険証（マイナ保険証・資格確認書）を持参し、支払いは現金のみです。命にかかわる緊急のときは119番（救急車）を呼びます。",
-        "saikai": "西海市では休日の急病・けがに「在宅当番医」制度があります（日替わりで担当医院が決まります）。受診の前に必ず当番医へ電話して、診てもらえるか確認してください（当番医・診療科は変わることがあります）。その月の在宅当番医は西海市のホームページで確認できます。命にかかわる緊急は119番。"
-      }
+      "answer": "遠方からの採用者などのために社員寮が用意されています。家賃（例：月額20,000円）や光熱水費の負担割合、入居できる期間は「社員寮管理規程」で定められています。詳しくは担当者に確認してください。"
     },
     {
       "id": "faq-010",
-      "category": "生活",
+      "category": "就業規則",
       "status": "確認済",
-      "question": "バスや電車（公共交通）の使い方は？",
+      "question": "資格を取るときの費用は会社が出してくれますか？",
       "questionLoc": {
-        "en": "How do I use buses and trains (public transport)?",
-        "vi": "Cách sử dụng xe buýt và tàu (giao thông công cộng)?",
-        "id": "Bagaimana menggunakan bus dan kereta (transportasi umum)?",
-        "ne": "बस र रेल (सार्वजनिक यातायात) कसरी प्रयोग गर्ने?",
-        "my": "ဘတ်စ်ကား/ရထား (အများသုံး သယ်ယူပို့ဆောင်ရေး) ဘယ်လို သုံးရမလဲ။"
+        "en": "Does the company pay for obtaining work qualifications?",
+        "vi": "Công ty có chi trả chi phí thi lấy chứng chỉ không?",
+        "id": "Apakah perusahaan menanggung biaya untuk memperoleh kualifikasi kerja?"
       },
-      "answer": {
-        "sasebo": "市内は路線バス（西肥バス・させぼバス）と鉄道（JR佐世保線・松浦鉄道MR）で移動できます。バスや松浦鉄道では交通系ICカード「nagasaki nimoca（ナガサキニモカ）」が使え、Suica・ICOCA・SUGOCA・PASMOなど全国の交通系ICカードも利用できます。ICカードは西肥バスの佐世保バスセンターや松浦鉄道の窓口などで購入・チャージできます。",
-        "saikai": "西海市には鉄道がなく、移動は路線バス（さいかい交通・西肥バスなど）と船が中心です。さいかい交通は西海市内と長崎市方面を結びます（電話0959-22-0013）。離島（松島など）へはフェリー・高速船を使います。時刻・運賃・運行状況は各事業者や市の公共交通案内で確認してください。"
-      }
+      "answer": "業務上必要と認められる資格（小型船舶操縦士、クレーン運転士、玉掛け技能講習、溶接技能資格など）の受験費用・講習費用は、会社が全額負担します。"
     },
     {
       "id": "faq-011",
-      "category": "生活",
+      "category": "安全衛生",
       "status": "確認済",
-      "question": "台風や地震など災害のときはどうすればいいですか？避難所は？",
+      "question": "現場で必ず着ける保護具は？",
       "questionLoc": {
-        "en": "What should I do in disasters like typhoons or earthquakes? Where are the shelters?",
-        "vi": "Khi có thiên tai như bão, động đất thì làm gì? Nơi trú ẩn ở đâu?",
-        "id": "Apa yang harus dilakukan saat bencana seperti topan atau gempa? Di mana tempat pengungsian?",
-        "ne": "आँधी वा भूकम्पजस्ता विपद्मा के गर्ने? आश्रयस्थल कहाँ छ?",
-        "my": "မုန်တိုင်း/ငလျင် ကဲ့သို့ သဘာဝဘေးတွင် ဘာလုပ်ရမလဲ။ ခိုလှုံရာ ဘယ်မှာလဲ။"
+        "en": "What protective equipment must I always wear on site?",
+        "vi": "Tại hiện trường phải luôn đeo thiết bị bảo hộ nào?",
+        "id": "Alat pelindung apa yang harus selalu dipakai di lokasi?"
       },
-      "answer": {
-        "sasebo": "強い台風や地震、大雨のときは安全な避難所へ避難します。開設している避難所・避難情報・ハザードマップ（危険な場所の地図）は「佐世保市防災ポータル（sasebo-bousai.my.site.com）」で確認できます。日ごろから家の近くの避難所と危険な場所を確認しておきましょう。市からの避難情報に従ってください。緊急のときは119番（消防）です。",
-        "saikai": "強い台風・地震・大雨のときは安全な避難所へ避難します。危険な場所は「西海市地域別防災ハザードマップ」（津波・洪水など）で確認できます（防災基地対策課 0959-37-0028）。日ごろから近くの避難所と危険な場所を確認しておきましょう。市の避難情報に従ってください。緊急は119番。"
-      }
+      "answer": "保護帽（ヘルメット）は飛来・落下・墜落用の国家検定合格品を使い、あご紐を確実に締めます。グラインダー研削・溶接スラグ剥離・ガス切断のときは保護メガネを着用します。安全靴はつま先に先芯が入ったものを履き、必要に応じて甲プロテクターを併用します。"
     },
     {
       "id": "faq-012",
-      "category": "生活",
-      "status": "要確認",
-      "question": "ハラル対応の店やお祈りの場所はありますか？",
+      "category": "安全衛生",
+      "status": "確認済",
+      "question": "溶接やガス切断のとき、服装で気をつけることは？",
       "questionLoc": {
-        "en": "Are there halal shops or places to pray?",
-        "vi": "Có cửa hàng halal hoặc nơi cầu nguyện không?",
-        "id": "Apakah ada toko halal atau tempat untuk salat?",
-        "ne": "हलाल पसल वा प्रार्थना गर्ने ठाउँ छ?",
-        "my": "ဟလာ(လ်) ဆိုင် သို့မဟုတ် ဆုတောင်းရန် နေရာ ရှိပါသလား။"
+        "en": "What should I watch for in clothing during welding or gas cutting?",
+        "vi": "Khi hàn hoặc cắt gas, cần lưu ý gì về trang phục?",
+        "id": "Apa yang harus diperhatikan soal pakaian saat mengelas atau memotong gas?"
       },
-      "answer": "宗教・文化に配慮した食材店（ハラル食品など）やお祈りの場所については、地域の最新情報を地図と一緒にご案内します。場所や営業状況は変わることがあるので、スタッフにも相談してください。"
+      "answer": "火気作業（溶接・ガス切断など）に従事する人は、化学繊維のインナーの着用は厳禁です。綿100%、または難燃・防炎加工された作業服や革製ジャケットを着用してください。"
     },
     {
       "id": "faq-013",
-      "category": "手続き",
+      "category": "安全衛生",
       "status": "確認済",
-      "question": "在留カード（在留期間）の更新はいつ、どこでしますか？",
+      "question": "元請と協力会社が混在する現場の安全管理体制は？",
       "questionLoc": {
-        "en": "When and where do I renew my residence card (period of stay)?",
-        "vi": "Khi nào và ở đâu để gia hạn thẻ cư trú (thời gian lưu trú)?",
-        "id": "Kapan dan di mana memperpanjang kartu izin tinggal (masa tinggal)?",
-        "ne": "निवास कार्ड (बसाइ अवधि) कहिले र कहाँ नवीकरण गर्ने?",
-        "my": "နေထိုင်ခွင့်ကတ် (နေထိုင်ခွင့်ကာလ) ကို ဘယ်အချိန် ဘယ်နေရာ သက်တမ်းတိုးရမလဲ။"
+        "en": "How is safety managed when prime and subcontractor workers are mixed on site?",
+        "vi": "Quản lý an toàn thế nào khi công nhân nhà thầu chính và phụ cùng làm việc?",
+        "id": "Bagaimana manajemen keselamatan saat pekerja utama dan subkontraktor bercampur?"
       },
-      "answer": {
-        "sasebo": "在留期限が切れる前（おおむね3か月前から）に、出入国在留管理局で更新（在留期間更新許可申請）をします。長崎県を担当するのは「福岡出入国在留管理局 長崎出張所」（〒850-0921 長崎市松が枝町7-29 長崎港湾合同庁舎、電話095-822-5289、受付は平日9:00～12:00・13:00～16:00）です。佐世保市内には窓口がないため長崎市まで行く必要があります（オンライン申請ができる場合もあります）。必要な書類は在留資格によって違います。",
-        "saikai": "在留期限が切れる前（おおむね3か月前から）に、出入国在留管理局で更新します。長崎県の担当は「福岡出入国在留管理局 長崎出張所」（長崎市松が枝町7-29、電話095-822-5289、平日9:00〜12:00・13:00〜16:00）。西海市内には窓口がないため長崎市まで行く必要があります（オンライン申請ができる場合もあります）。必要書類は在留資格で異なります。"
-      }
+      "answer": "同じ造船所などで元方事業者と協力会社の労働者が混在して作業し、常時50人以上が従事する場合、元方事業者は「統括安全衛生責任者」を選任します。責任者は災害防止協議会の設置・運営、作業間の連絡調整、作業場の巡視を統括します。"
     },
     {
       "id": "faq-014",
-      "category": "手続き",
-      "status": "ドラフト可",
-      "question": "引っ越したら住所変更はどうしますか？",
+      "category": "安全衛生",
+      "status": "確認済",
+      "question": "船内安全衛生委員会について教えてください。",
       "questionLoc": {
-        "en": "How do I change my address after moving?",
-        "vi": "Sau khi chuyển nhà, đổi địa chỉ thế nào?",
-        "id": "Bagaimana mengubah alamat setelah pindah?",
-        "ne": "सरेपछि ठेगाना कसरी परिवर्तन गर्ने?",
-        "my": "အိမ်ပြောင်းပြီးနောက် နေရပ်လိပ်စာ ဘယ်လို ပြောင်းရမလဲ။"
+        "en": "Tell me about the onboard safety and health committee.",
+        "vi": "Cho tôi biết về ủy ban an toàn vệ sinh trên tàu.",
+        "id": "Jelaskan tentang komite keselamatan dan kesehatan di atas kapal."
       },
-      "answer": {
-        "sasebo": "引っ越したら14日以内に、新しい住所の市区町村役場で手続きをします。在留カードの裏面に新しい住所が記載されます。",
-        "saikai": "引っ越したら14日以内に、新しい住所の市区町村役場（西海市なら西海市役所または各総合支所）で手続きをします。在留カードの裏面に新しい住所が記載されます。"
-      }
+      "answer": "常時5人以上の船員が乗り組む船舶では「船内安全衛生委員会」を設置し、月1回以上開催します。船長・安全担当者・衛生担当者・消火作業指揮者などで構成し、船内の安全管理・火災予防・衛生保持を調査審議します。"
     },
     {
       "id": "faq-015",
-      "category": "手続き",
-      "status": "ドラフト可",
-      "question": "マイナンバーとは何ですか？必要ですか？",
+      "category": "安全衛生",
+      "status": "確認済",
+      "question": "高所作業（2m以上）の決まりは？",
       "questionLoc": {
-        "en": "What is My Number? Do I need it?",
-        "vi": "My Number là gì? Có cần không?",
-        "id": "Apa itu My Number? Apakah perlu?",
-        "ne": "माइ नम्बर के हो? चाहिन्छ?",
-        "my": "My Number ဆိုတာ ဘာလဲ။ လိုအပ်သလား။"
+        "en": "What are the rules for working at height (2m or more)?",
+        "vi": "Quy định khi làm việc trên cao (từ 2m trở lên) là gì?",
+        "id": "Apa aturan bekerja di ketinggian (2m atau lebih)?"
       },
-      "answer": "マイナンバーは一人ひとりに割り当てられる12桁の番号で、税金や社会保障の手続きで使います。勤務先に提出を求められることがあります。"
+      "answer": "床面から2m以上の場所での作業は「高所作業」です。高さ90cm以上の堅固な手すりを設け、親綱を張って墜落制止用器具（フルハーネス型安全帯）を確実にかけます。上下同時作業は原則禁止で、やむを得ない場合は立入禁止区域を設けて監視員を置きます。足場の解体や開口部の手すりを一時撤去したときは、作業後すぐに復旧します。"
     },
     {
       "id": "faq-016",
-      "category": "手続き",
-      "status": "ドラフト可",
-      "question": "健康保険（国民健康保険・社会保険）はどうなりますか？",
+      "category": "安全衛生",
+      "status": "確認済",
+      "question": "タンク内など閉鎖区画で作業するときの注意は？",
       "questionLoc": {
-        "en": "How does health insurance (National Health / social insurance) work?",
-        "vi": "Bảo hiểm y tế (BHYT quốc dân / bảo hiểm xã hội) thế nào?",
-        "id": "Bagaimana asuransi kesehatan (asuransi kesehatan nasional / jaminan sosial)?",
-        "ne": "स्वास्थ्य बीमा (राष्ट्रिय स्वास्थ्य बीमा/सामाजिक बीमा) कस्तो हुन्छ?",
-        "my": "ကျန်းမာရေး အာမခံ (အမျိုးသား ကျန်းမာရေး/လူမှုဖူလုံရေး) ဘယ်လို ဖြစ်မလဲ။"
+        "en": "What precautions apply when working in tanks or enclosed spaces?",
+        "vi": "Cần lưu ý gì khi làm việc trong bồn hoặc không gian kín?",
+        "id": "Apa kewaspadaan saat bekerja di tangki atau ruang tertutup?"
       },
-      "answer": "働き方によって、勤務先の社会保険か、市の国民健康保険に加入します。保険証があると医療費の自己負担が軽くなります。詳しくは勤務先か市役所で確認してください。"
+      "answer": "バラストタンクなどの閉鎖区画で塗装・溶接を行うときは、作業前と作業中（少なくとも30分に1回）にガス濃度・酸素濃度を測定し、強制換気ファンを常時動かします。塗装（可燃性ガス発生）と火気作業（ハツリ・溶接など）が重ならないよう事前に連絡調整します。専従の監視員（見張人）を配置し、消火器を常備します。"
     },
     {
       "id": "faq-017",
-      "category": "手続き",
-      "status": "ドラフト可",
-      "question": "年金（国民年金・厚生年金）はどうなりますか？",
+      "category": "安全衛生",
+      "status": "確認済",
+      "question": "TBM-KY活動（危険予知）はどうやるのですか？",
       "questionLoc": {
-        "en": "How does pension (National Pension / employees' pension) work?",
-        "vi": "Lương hưu (niên kim quốc dân / niên kim phúc lợi) thế nào?",
-        "id": "Bagaimana pensiun (pensiun nasional / pensiun karyawan)?",
-        "ne": "पेन्सन (राष्ट्रिय पेन्सन/कर्मचारी पेन्सन) कस्तो हुन्छ?",
-        "my": "ပင်စင် (အမျိုးသား ပင်စင်/ဝန်ထမ်း ပင်စင်) ဘယ်လို ဖြစ်မလဲ။"
+        "en": "How do we carry out TBM-KY (hazard prediction) activities?",
+        "vi": "Hoạt động TBM-KY (dự đoán nguy hiểm) được thực hiện thế nào?",
+        "id": "Bagaimana melakukan kegiatan TBM-KY (prediksi bahaya)?"
       },
-      "answer": "日本で働く人は原則として年金制度に加入します。働き方によって厚生年金か国民年金になります。帰国時の脱退一時金など制度もあるので、わからないときは相談してください。"
+      "answer": "作業開始前に、KY基礎4ラウンド法で行います。①現状把握＝どんな危険がひそむかを「〜なので〜になる」の形で洗い出す。②本質追究＝最優先で防ぐべき重点危険を1〜2項目に絞る。③対策樹立＝すぐ実行できる具体的な対策を立てる。④目標設定＝行動目標を決め、全員で指差し呼称する。マンネリ化を防ぐため作業ごとにリーダーを交代し、過去のヒヤリハットや類似災害事例を参考にします。記録（KYシート）はシステムに保存します。"
     },
     {
       "id": "faq-018",
-      "category": "手続き",
+      "category": "安全衛生",
       "status": "確認済",
-      "question": "税金（住民税）や確定申告はどうすればいいですか？",
+      "question": "外国人が安全に働くために知っておくことは？（標識など）",
       "questionLoc": {
-        "en": "What about taxes (resident tax) and tax filing?",
-        "vi": "Thuế (thuế cư trú) và khai thuế thì làm thế nào?",
-        "id": "Bagaimana dengan pajak (pajak penduduk) dan pelaporan pajak?",
-        "ne": "कर (वासिन्दा कर) र कर विवरण कसरी गर्ने?",
-        "my": "အခွန် (နေထိုင်သူ အခွန်) နှင့် အခွန်တင်ပြခြင်း ဘယ်လို လုပ်ရမလဲ။"
+        "en": "What should foreign workers know to work safely? (signs, etc.)",
+        "vi": "Người nước ngoài cần biết gì để làm việc an toàn? (biển báo, v.v.)",
+        "id": "Apa yang harus diketahui pekerja asing agar bekerja dengan aman? (rambu, dll.)"
       },
-      "answer": {
-        "sasebo": "収入に応じて所得税（国の税金）と住民税（市・県の税金）がかかります。会社員は会社の年末調整で済むことが多いですが、状況によっては自分で確定申告が必要です。所得税の相談・申告は「佐世保税務署」、住民税は「佐世保市役所 市民税課」が窓口です。個別の状況は専門窓口かスタッフに相談してください。",
-        "saikai": "収入に応じて所得税（国）と住民税（市・県）がかかります。会社員は年末調整で済むことが多いですが、状況によっては確定申告が必要です。所得税の相談・申告は西海市を管轄する「長崎税務署」、住民税は「西海市役所（税務課）または各総合支所」が窓口です。個別の状況は専門窓口かスタッフに相談してください。"
-      }
+      "answer": "会社は母国語または平易な日本語で安全衛生教育を行います。現場の標識は必ず理解して守ってください。赤色は消火器・消火設備や立入禁止を示します。指定場所以外での喫煙・火気の使用は禁止です。「高圧注意」「酸欠危険」などの標識がある場所には、保護具なしで近づかないでください。"
     },
     {
       "id": "faq-019",
-      "category": "手続き",
-      "status": "ドラフト可",
-      "question": "特定技能の各種更新（保険など）の時期はいつですか？",
+      "category": "安全衛生",
+      "status": "確認済",
+      "question": "3S（整理・整頓・清掃）や通路のルールは？",
       "questionLoc": {
-        "en": "When are the renewals (insurance, etc.) for Specified Skilled Worker status?",
-        "vi": "Khi nào gia hạn các loại (bảo hiểm…) cho tư cách Kỹ năng đặc định?",
-        "id": "Kapan perpanjangan (asuransi, dll.) untuk status Pekerja Berketerampilan Spesifik?",
-        "ne": "विशेष सीप (Specified Skilled Worker) का विभिन्न नवीकरण (बीमा आदि) कहिले?",
-        "my": "သီးခြားကျွမ်းကျင်လုပ်သား ၏ သက်တမ်းတိုးမှုများ (အာမခံ စသည်) ဘယ်အချိန်လဲ။"
+        "en": "What are the rules for 3S (sort, set in order, shine) and walkways?",
+        "vi": "Quy định về 3S (sàng lọc, sắp xếp, sạch sẽ) và lối đi là gì?",
+        "id": "Apa aturan 3S (ringkas, rapi, resik) dan jalur jalan?"
       },
-      "answer": "在留期間や特定技能外国人の保険などには更新の時期があります。案内が来たら忘れずに手続きをしてください。アプリでも更新時期をお知らせします。"
+      "answer": "全員で3S（整理・整頓・清掃）を徹底します。整理＝必要な物と不要な物を分け、不要な物を処分する。整頓＝置き方を決めて使いやすくする（長い物は寝かせる、丸い物は転がり止めをする、重い物は下に積む）。清掃＝汚れ・ゴミを取り除く。作業場では「安全通路（白線）」と「作業通路（黄線）」を区別し、通路に機材やホースを放置してはいけません。"
     },
     {
       "id": "faq-020",
-      "category": "手続き",
+      "category": "安全衛生",
       "status": "確認済",
-      "question": "外国の運転免許を日本の免許に切り替えるには？",
+      "question": "資格がないとできない作業は？",
       "questionLoc": {
-        "en": "How do I convert a foreign driver's license to a Japanese one?",
-        "vi": "Cách đổi bằng lái nước ngoài sang bằng lái Nhật?",
-        "id": "Bagaimana mengubah SIM luar negeri menjadi SIM Jepang?",
-        "ne": "विदेशी सवारी अनुमतिपत्रलाई जापानी लाइसेन्समा कसरी बदल्ने?",
-        "my": "နိုင်ငံခြား ယာဉ်မောင်းလိုင်စင်ကို ဂျပန်လိုင်စင်အဖြစ် ဘယ်လို ပြောင်းရမလဲ။"
+        "en": "Which tasks require a license/qualification?",
+        "vi": "Những công việc nào bắt buộc phải có chứng chỉ/giấy phép?",
+        "id": "Pekerjaan apa saja yang memerlukan lisensi/kualifikasi?"
       },
-      "answer": "外国の運転免許は、一定の条件を満たせば手続き（外国免許切替）で日本の免許に切り替えられる場合があります。主な条件は、免許取得後その国に通算3か月以上滞在していたこと（書面で証明）、免許が有効期間内であることなどです。長崎県では「長崎県運転免許試験場（大村市古賀島町533-5）」で手続きします。ふつうは事前予約が必要で、在留カード・パスポート（出入国がわかるもの）・外国免許証・免許の日本語翻訳文などが必要です。長崎県警察HP「外国免許証からの日本免許証への切り替え」に多言語（英・中・韓・タガログ・ベトナム語）の案内があります。"
+      "answer": "日本の法律で、特定の危険作業は資格・免許がない人が行うことを固く禁じています。必要な特別教育・技能講習・免許を取るまでは、次の作業を絶対に操作しないでください：玉掛け作業（1トン以上は技能講習、1トン未満は特別教育）、クレーン・デリックの運転、ガス溶接・アーク溶接、高所作業車やフォークリフトの運転。"
     },
     {
       "id": "faq-021",
-      "category": "手続き",
-      "status": "要確認",
-      "question": "家族を日本に呼びたいときはどうすればいいですか？",
+      "category": "安全衛生",
+      "status": "確認済",
+      "question": "過去にどんな重大な事故がありましたか？（気をつけること）",
       "questionLoc": {
-        "en": "How can I bring my family to Japan?",
-        "vi": "Muốn đưa gia đình sang Nhật thì làm thế nào?",
-        "id": "Bagaimana jika ingin membawa keluarga ke Jepang?",
-        "ne": "परिवारलाई जापान बोलाउन के गर्ने?",
-        "my": "မိသားစုကို ဂျပန်သို့ ခေါ်ချင်ရင် ဘယ်လို လုပ်ရမလဲ။"
+        "en": "What major past accidents should I be aware of?",
+        "vi": "Đã có những tai nạn nghiêm trọng nào cần lưu ý?",
+        "id": "Kecelakaan besar apa di masa lalu yang harus diwaspadai?"
       },
-      "answer": "家族を呼べるかどうかは在留資格によって決まり、法的な判断が必要なので、ここで断定はできません。出入国在留管理局（長崎県は福岡出入国在留管理局 長崎出張所 095-822-5289）や、スタッフ・専門窓口に相談してください。電話相談は「外国人在留総合インフォメーションセンター（0570-013904）」も利用できます。"
+      "answer": "代表的な事例です。①爆発・火災＝換気不足やガス検知未実施で、タンク内の可燃性ガスに火気が引火。②倒壊＝約500kgの部材を固定せず立てかけ、クランプを外した直後に倒れて下敷き。③飛来・落下＝ガス切断後に下から覗き、落ちた鉄板が直撃。④墜落＝タラップのボルト破断や、手すりのない開口部からの転落。⑤熱中症＝夏季に通気の悪い防塵服で単独・長時間作業。いずれも事前点検・換気・立入禁止・複数人作業で防げます。命にかかわる緊急時は119番です。"
     },
     {
       "id": "faq-022",
-      "category": "手続き",
+      "category": "作業基準",
       "status": "確認済",
-      "question": "転職・勤務先が変わったときの届出は必要ですか？",
+      "question": "玉掛け作業のルールと資格は？",
       "questionLoc": {
-        "en": "Do I need to report when I change jobs or employers?",
-        "vi": "Khi đổi việc / nơi làm việc có cần khai báo không?",
-        "id": "Apakah perlu melapor saat pindah kerja / tempat kerja?",
-        "ne": "जागिर/कार्यस्थल परिवर्तन हुँदा सूचना दिनुपर्छ?",
-        "my": "အလုပ်/အလုပ်ခွင် ပြောင်းတဲ့အခါ အကြောင်းကြားဖို့ လိုသလား။"
+        "en": "What are the rules and qualifications for sling (tamakake) work?",
+        "vi": "Quy định và chứng chỉ cho công việc móc cáp (tamakake) là gì?",
+        "id": "Apa aturan dan kualifikasi untuk pekerjaan sling (tamakake)?"
       },
-      "answer": "就労資格などで在留している方は、勤務先（契約機関）が変わったとき、14日以内に出入国在留管理庁へ「所属（契約）機関に関する届出」が必要です。届出はオンライン・郵送・窓口でできます。手続きを忘れると在留資格に影響することもあるので、早めにスタッフや専門窓口に相談してください。"
+      "answer": "吊り上げ荷重1トン以上のクレーン等の玉掛けは「玉掛け技能講習」修了者、1トン未満は「玉掛け特別教育」修了者が行います。玉掛け3原則（適切な吊り具の選定／安全な退避位置の確保／明確な合図）を守ります。重心が不安定な船体ブロックの反転・移動時は2点吊りなどを厳守し、吊り荷の下には絶対に入らないでください。"
     },
     {
       "id": "faq-023",
-      "category": "仕事",
+      "category": "作業基準",
       "status": "確認済",
-      "question": "雇用契約と労働条件通知書について知りたいです",
+      "question": "玉掛けの合図（手・声）を教えてください。",
       "questionLoc": {
-        "en": "I want to know about my employment contract and the working conditions notice.",
-        "vi": "Tôi muốn biết về hợp đồng lao động và bản thông báo điều kiện làm việc.",
-        "id": "Saya ingin tahu tentang kontrak kerja dan surat pemberitahuan kondisi kerja.",
-        "ne": "रोजगार सम्झौता र कार्य अवस्था सूचना (労働条件通知書) बारे जान्न चाहन्छु।",
-        "my": "အလုပ်ခန့်စာချုပ်နှင့် အလုပ်အခြေအနေ အသိပေးစာ အကြောင်း သိချင်ပါတယ်။"
+        "en": "Please tell me the sling (tamakake) signals (hand and voice).",
+        "vi": "Hãy cho tôi biết tín hiệu móc cáp (bằng tay và bằng giọng).",
+        "id": "Tolong jelaskan aba-aba sling (tamakake) (tangan dan suara)."
       },
-      "answer": "日本で働くときは、会社から「労働条件通知書（または雇用契約書）」をもらえます。そこには給料、働く時間、休日、仕事の内容、契約期間などが書かれています。サインする前に内容をよく確認し、わからないところは遠慮せず質問してください。受け取った書類は必ず保管しておきましょう。日本語が難しいときは、やさしい日本語や母国語での説明を求めても大丈夫です。説明と違う・書類をもらえないなど困ったときは、スタッフや労働基準監督署に相談してください。"
+      "answer": "作業責任者は合図者を1名指名し、クレーン運転手に明確な合図を送ります。手による合図＝巻上げ：片手を上にして輪を描く／巻下げ：腕を水平に上げ手のひらを下にして振る／停止：腕を高く上げ手のひらを開いて静止／急停止：両手を高く広げ激しく左右に振る。声（無線）＝巻上げ「ゴーヘイ」／巻下げ「スラー」／ジブ上げ・下げ「オヤゴーヘイ」「オヤスラー」。笛だけの合図は聞き間違いによる重大事故を防ぐため禁止で、手や無線の補助としてのみ使います。"
     },
     {
       "id": "faq-024",
-      "category": "仕事",
+      "category": "手続き",
       "status": "確認済",
-      "question": "最低賃金や給与明細の見方を教えてください",
+      "question": "仕事中にけが人が出たら、どんな報告が必要ですか？",
       "questionLoc": {
-        "en": "Please explain the minimum wage and how to read my pay slip.",
-        "vi": "Hãy giải thích mức lương tối thiểu và cách đọc phiếu lương.",
-        "id": "Tolong jelaskan upah minimum dan cara membaca slip gaji.",
-        "ne": "न्यूनतम ज्याला र तलब पर्ची (給与明細) कसरी हेर्ने भन्ने बताइदिनुहोस्।",
-        "my": "အနိမ့်ဆုံးလုပ်ခနှင့် လစာစလစ် ဖတ်နည်းကို ရှင်းပြပေးပါ။"
+        "en": "If someone is injured at work, what report is required?",
+        "vi": "Nếu có người bị thương khi làm việc, cần báo cáo gì?",
+        "id": "Jika ada yang cedera saat bekerja, laporan apa yang diperlukan?"
       },
-      "answer": "日本では地域ごとに「最低賃金」が法律で決まっていて、時給はその金額以上でなければなりません（長崎県の最低賃金額は毎年見直されます。最新額は長崎労働局のサイトで確認できます）。毎月の給料からは、所得税・住民税・社会保険料などが「控除」として引かれ、残った金額が手取りです。「給与明細」に、支給（基本給・残業代など）と控除の内訳が書かれているので、毎月必ず確認しましょう。金額がおかしいと思ったら、給与明細を持って勤務先かスタッフ、労働基準監督署に相談してください。"
+      "answer": "労働災害で従業員（協力会社を含む）が被災し休業などが生じた場合、会社は速やかに労働基準監督署へ「労働者死傷病報告」を提出します。報告では、事業場名・被災者の年齢/職種/経験/傷病名と部位、（該当すれば）国籍・在留資格、そして発生状況を5W1H（どんな場所で・どんな作業中に・どんな物に・どんな不安全な状態で・どんな災害が起きたか）で明確にします。まず人命と安全を最優先し、緊急時は119番です。"
     },
     {
       "id": "faq-025",
-      "category": "仕事",
+      "category": "手続き",
       "status": "確認済",
-      "question": "残業代（割増賃金）はどうなりますか？",
+      "question": "フルハーネスや安全靴などを買うときの申請は？",
       "questionLoc": {
-        "en": "How does overtime pay (premium wages) work?",
-        "vi": "Tiền làm thêm giờ (lương phụ trội) được tính thế nào?",
-        "id": "Bagaimana perhitungan upah lembur (upah premium)?",
-        "ne": "ओभरटाइम भत्ता (割増賃金) कसरी हुन्छ?",
-        "my": "အချိန်ပိုလုပ်ခ (割増賃金) ဘယ်လို တွက်သလဲ။"
+        "en": "How do I apply to purchase safety gear like a full harness or safety shoes?",
+        "vi": "Cách xin mua dụng cụ an toàn như dây an toàn toàn thân hoặc giày bảo hộ?",
+        "id": "Bagaimana mengajukan pembelian alat keselamatan seperti full harness atau sepatu safety?"
       },
-      "answer": "法律で決まった時間（原則1日8時間・週40時間）を超えて働いた場合、会社は割増した残業代を払う必要があります。割増率の目安は、時間外労働は25％以上、深夜（22時〜翌朝5時）は25％以上、法定休日の労働は35％以上です。自分でも働いた時間を記録しておくと安心です。残業代が支払われない・少ないと思うときは、給与明細やタイムカードの記録とあわせて、勤務先かスタッフ、労働基準監督署（佐世保労働基準監督署など）に相談してください。"
+      "answer": "業務に必要な安全用具（フルハーネス、保護メガネ、安全靴など）を購入・申請するときは、システムから用具の名称・メーカー名・購入日・金額、必要理由（どんな作業に使うか）を入力し、領収書などの画像を添付します。"
     },
     {
       "id": "faq-026",
-      "category": "仕事",
+      "category": "手続き",
       "status": "確認済",
-      "question": "労働時間・休憩・休日のルールは？",
+      "question": "報告に名前や船番を入れても大丈夫ですか？（個人情報・機密）",
       "questionLoc": {
-        "en": "What are the rules for working hours, breaks, and days off?",
-        "vi": "Quy định về giờ làm việc, giờ nghỉ và ngày nghỉ là gì?",
-        "id": "Apa aturan jam kerja, istirahat, dan hari libur?",
-        "ne": "काम गर्ने समय, विश्राम र बिदाका नियम के हुन्?",
-        "my": "အလုပ်ချိန်၊ နားချိန်နှင့် အလုပ်ပိတ်ရက် စည်းမျဉ်းတွေက ဘာတွေလဲ။"
+        "en": "Is it OK to include names or hull numbers in reports? (personal info / confidentiality)",
+        "vi": "Có được ghi tên hoặc số thân tàu trong báo cáo không? (thông tin cá nhân / bảo mật)",
+        "id": "Bolehkah menyertakan nama atau nomor lambung di laporan? (data pribadi / kerahasiaan)"
       },
-      "answer": "働く時間は原則として1日8時間・週40時間までが基本です。労働時間が6時間を超えるときは45分以上、8時間を超えるときは60分以上の休憩をとる権利があります。会社は少なくとも週1日（または4週で4日）の休日を与えなければなりません。実際の勤務時間や休日は、雇用契約や就業規則で決まります。契約と違う、休憩や休日がとれないなど、おかしいと感じたら勤務先かスタッフ、労働基準監督署に相談してください。"
-    },
-    {
-      "id": "faq-027",
-      "category": "仕事",
-      "status": "確認済",
-      "question": "有給休暇（年次有給休暇）はもらえますか？",
-      "questionLoc": {
-        "en": "Can I get paid leave (annual paid vacation)?",
-        "vi": "Tôi có được nghỉ phép có lương (phép năm) không?",
-        "id": "Apakah saya bisa mendapat cuti berbayar (cuti tahunan)?",
-        "ne": "तलबी बिदा (वार्षिक तलबी बिदा) पाइन्छ?",
-        "my": "လစာနှင့် ခွင့် (နှစ်စဉ် လစာနှင့်ခွင့်) ရနိုင်ပါသလား။"
-      },
-      "answer": "半年以上続けて働き、決められた労働日の8割以上出勤した人は、国籍に関係なく「年次有給休暇（有給）」をもらえます。最初は10日で、勤続年数が長くなると日数が増えます。パートやアルバイトでも、働く日数に応じて取得できます。有給は理由を問わず取ることができ、休んでも給料は減りません。取り方は会社のルールに従って前もって申し出ます。取らせてもらえないなど困ったときは、スタッフや労働基準監督署に相談してください。"
-    },
-    {
-      "id": "faq-031",
-      "category": "仕事",
-      "status": "確認済",
-      "question": "仕事中や通勤中にけがをしたら（労災保険）？",
-      "questionLoc": {
-        "en": "What if I get injured at work or commuting? (workers' accident insurance)",
-        "vi": "Nếu bị thương khi làm việc hoặc đi làm thì sao? (bảo hiểm tai nạn lao động)",
-        "id": "Bagaimana jika cedera saat bekerja atau dalam perjalanan kerja? (asuransi kecelakaan kerja)",
-        "ne": "काममा वा आउँदा-जाँदा चोट लागे के गर्ने? (श्रमिक दुर्घटना बीमा 労災)",
-        "my": "အလုပ်ခွင်တွင် သို့မဟုတ် အသွားအပြန်လမ်းတွင် ထိခိုက်ရင်? (လုပ်သား ထိခိုက်မှု အာမခံ 労災)"
-      },
-      "answer": "仕事が原因のけが・病気や、通勤中の事故は「労災保険（労働者災害補償保険）」の対象になります。労災は、会社の規模や雇用形態（正社員・パートなど）に関係なく、働く人すべてが対象です。治療費は原則として自己負担なしで、仕事を休んだ期間の補償もあります。まず安全を確保し、必要なら119番（救急）。そのうえで必ず勤務先に報告してください。健康保険ではなく労災として扱う点に注意します。会社が手続きをしてくれないなど困ったときは、労働基準監督署やスタッフに相談してください。"
-    },
-    {
-      "id": "faq-032",
-      "category": "仕事",
-      "status": "確認済",
-      "question": "職場でのハラスメントや困りごとは誰に相談できますか？",
-      "questionLoc": {
-        "en": "Who can I talk to about harassment or problems at work?",
-        "vi": "Tôi có thể nói chuyện với ai về quấy rối hoặc vấn đề tại nơi làm việc?",
-        "id": "Kepada siapa saya bisa berkonsultasi soal pelecehan atau masalah di tempat kerja?",
-        "ne": "कार्यस्थलमा हुने उत्पीडन वा समस्याबारे कोसँग कुरा गर्न सकिन्छ?",
-        "my": "အလုပ်ခွင်က နှောင့်ယှက်မှု သို့မဟုတ် ပြဿနာများကို ဘယ်သူနဲ့ တိုင်ပင်လို့ရမလဲ။"
-      },
-      "answer": "職場でのいじめ・暴言・パワハラ・セクハラ、賃金の未払い、契約と違う働かせ方などで困ったときは、一人でがまんしないでください。まず画面の「スタッフに相談する」を使うか、公的な相談窓口に連絡できます。労働トラブルは「労働基準監督署」、外国人の生活・仕事の相談は「長崎県外国人相談窓口（多言語）」、国の「外国人在留支援センター（FRESC）」電話相談（0120-76-2029）も利用できます。相談したことを理由に不利に扱うことは法律で禁止されています。"
-    },
-    {
-      "id": "faq-028",
-      "category": "その他",
-      "status": "ドラフト可",
-      "question": "仕事や人間関係の悩みを相談したいです",
-      "questionLoc": {
-        "en": "I want to talk about work or relationship worries.",
-        "vi": "Tôi muốn tâm sự về lo lắng công việc hoặc quan hệ.",
-        "id": "Saya ingin berkonsultasi soal pekerjaan atau hubungan.",
-        "ne": "काम वा सम्बन्धका समस्याबारे कुरा गर्न चाहन्छु।",
-        "my": "အလုပ် သို့မဟုတ် လူမှုဆက်ဆံရေး စိုးရိမ်မှုများကို တိုင်ပင်ချင်ပါတယ်။"
-      },
-      "answer": "つらいときや困ったときは、一人でかかえこまないでください。画面の「スタッフに相談する」から、運用チームのスタッフにつながります。"
-    },
-    {
-      "id": "faq-029",
-      "category": "その他",
-      "status": "確認済",
-      "question": "お金に困っています。給料のことで相談したいです",
-      "questionLoc": {
-        "en": "I'm having money trouble. I'd like to talk about my wages.",
-        "vi": "Tôi đang khó khăn về tiền. Tôi muốn hỏi về lương.",
-        "id": "Saya kesulitan uang. Saya ingin konsultasi soal gaji.",
-        "ne": "पैसाको समस्या छ। तलबबारे सल्लाह लिन चाहन्छु।",
-        "my": "ငွေကြေး အခက်အခဲ ရှိနေပါတယ်။ လစာအကြောင်း တိုင်ပင်ချင်ပါတယ်။"
-      },
-      "answer": {
-        "sasebo": "お金や給料のことで困ったときは、まずスタッフに相談してください。賃金が支払われない・残業代などの労働トラブルは「佐世保労働基準監督署」、生活・在留・仕事の相談は「長崎県外国人相談窓口（長崎県国際交流協会）」が多言語で対応しています。国の「外国人在留支援センター（FRESC）」の電話相談（0120-76-2029）も利用できます。必要に応じて公的な相談窓口をご案内します。",
-        "saikai": "お金や給料のことで困ったときは、まずスタッフに相談してください。賃金未払い・残業代などの労働トラブルは、お住まい・勤務先を管轄する「労働基準監督署」へ。生活・在留・仕事の相談は「長崎県外国人相談窓口（長崎県国際交流協会）」が多言語で対応。国の「外国人在留支援センター（FRESC）」の電話相談（0120-76-2029）も利用できます。"
-      }
-    },
-    {
-      "id": "faq-030",
-      "category": "その他",
-      "status": "ドラフト可",
-      "question": "緊急のとき（事故・事件・急病）はどこに連絡しますか？",
-      "questionLoc": {
-        "en": "In an emergency (accident, crime, sudden illness), who do I contact?",
-        "vi": "Khi khẩn cấp (tai nạn, sự cố, bệnh đột ngột) liên hệ ai?",
-        "id": "Saat darurat (kecelakaan, kejahatan, sakit mendadak) hubungi siapa?",
-        "ne": "आपत्‌कालमा (दुर्घटना, घटना, अचानक बिरामी) कहाँ सम्पर्क गर्ने?",
-        "my": "အရေးပေါ် (မတော်တဆမှု၊ ဖြစ်ရပ်၊ ရုတ်တရက်ဖျားနာမှု) အခါ ဘယ်ကို ဆက်သွယ်ရမလဲ။"
-      },
-      "answer": "急病やけがは119番（救急車・消防）、事故や事件は110番（警察）です。海の事故は118番です。落ち着いて、場所と状況を伝えてください。多言語の相談窓口もあります。"
+      "answer": "報告に個人名（被災者・協力会社名）や顧客名、新造船の機密スペック（船番など）が含まれる場合、システムが自動でマスキング（匿名化）して保存します。これは情報セキュリティ（ISMS）や秘密保持契約（NDA）を守るためです。安心して報告してください。"
     }
   ]
 }
