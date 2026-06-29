@@ -1,130 +1,76 @@
-# サンプル株式会社 就業規則アシスタント（BtoB デモ）
+# 日本生活サポート チャット（global-AI-chat）
 
-> ⚠️ **これはサンプルデータによるデモです。**
-> 本リポジトリで扱う規程はすべて、実在しない架空企業「**サンプル株式会社**」向けに作成した
-> ダミーデータです。実在の企業・規程・人物とは一切関係ありません。回答は参考情報であり、
-> 実際の判断は人事担当者・専門家へご確認ください。
+特定技能・留学生として日本（佐世保エリア）で働く外国人材を支える統合サポートアプリの **機能②「24時間・多言語Q&Aチャット」**。AIが版管理されたFAQ知識ベースに基づき、利用者の言語で生活・手続きの質問に答えます。
 
-社内規程（就業規則など）について自然言語で質問でき、**根拠となる規程名・条番号を明示して**
-回答する就業規則チャットボットのデモです。Anthropic の Claude（既定 `claude-opus-4-6`）を
-利用し、回答は必ず規程本文に基づきます。該当が無ければ正直に「不明」と答えます。
-出力言語を選択でき、日本語以外を選ぶと**選択言語と日本語の二言語**で回答します。
+これは **Phase 1（チャットMVP）** の実装です。全体仕様は [`CLAUDE.md`](./CLAUDE.md) と [`docs/HANDOFF.md`](./docs/HANDOFF.md) を参照してください。
 
-## 特長
+## 特徴
 
-- **根拠提示**: 回答に規程名・条番号（例: `就業規則 第11条`）を明示。
-- **ハルシネーション抑制**: 規程に無い事項は推測せず「不明」と回答。
-- **prompt caching**: 全規程を載せたシステムプロンプトに `cache_control: ephemeral` を付与し、
-  繰り返し質問のコスト・レイテンシを低減。
-- **多言語対応**: 画面右上で出力言語を選択。日本語以外を選ぶと、選択言語と日本語の二言語で回答
-  （英語・簡体字/繁体字中国語・韓国語・ベトナム語・スペイン語・ポルトガル語・フランス語）。
-- **SSE ストリーミング**: 回答をリアルタイムに表示。
-- **依存なしの単一 HTML フロント**: IME 変換確定の Enter で誤送信しない実装（`isComposing` 判定）。
+- **KBグラウンディング**: 回答は `data/faq.json`（30項目）に基づく。KBに無いことは断定せずスタッフ誘導。
+- **同言語応答**: 入力した言語（日本語/英語/ベトナム語など）で返答。
+- **やさしい日本語トグル**: 日本語回答を平易化。
+- **スタッフに相談**: 人につなぐ座席（記録＋窓口提示）。
+- **モバイル前提**: スマホで読みやすいUI。
+- **安全**: APIキーはサーバー側のみ。緊急番号（119/110/118）を常に案内。
 
-## ディレクトリ構成
+## 技術スタック
 
-```
-.
-├── docs/                       # ダミー規程（Markdown、条番号付き）7 本
-│   ├── 01_employment_rules.md      就業規則
-│   ├── 02_salary_rules.md          給与規程
-│   ├── 03_leave_rules.md           休暇・休業規程
-│   ├── 04_harassment_prevention.md ハラスメント防止規程
-│   ├── 05_privacy_handling.md      個人情報取扱規程
-│   ├── 06_telework_rules.md        テレワーク規程
-│   └── 07_side_business_rules.md   副業・兼業規程
-├── app/
-│   ├── backend/
-│   │   ├── ingest.py           docs/ を読み corpus.json を生成
-│   │   ├── corpus.json         生成物（規程の配列・件数・全文字数）
-│   │   └── server.py           FastAPI（/api/chat, /api/health, /）
-│   └── frontend/
-│       └── index.html          チャット UI（依存なし単一 HTML）
-├── api/index.py                Vercel 用エントリポイント
-├── vercel.json                 Vercel デプロイ設定
-├── requirements.txt
-├── .env.example
-├── .gitignore
-└── run.sh                      venv 作成→依存導入→ingest→起動
-```
+Next.js 15 (App Router) / React 19 / TypeScript / Anthropic Claude API / Vercel
 
-## 取り込み（ingest）
-
-`docs/` 内の `.md` / `.txt` を読み込み、規程ごとに
-`{id, title, kind, source, text}` の配列へ変換して `app/backend/corpus.json` を生成します
-（全文字数・件数も出力）。OS 依存コマンド（`textutil` 等）は使用していません。
+## セットアップ
 
 ```bash
-python app/backend/ingest.py
+nvm use                     # Node 22（.nvmrc）に揃える
+npm install
+cp .env.example .env.local  # ANTHROPIC_API_KEY を設定（Vercel同期なら vercel env pull）
+npm run dev                 # http://localhost:3000
 ```
 
-## ローカル起動
+開発環境の詳しい構築手順（Vercel同期・ブランチ運用など）は **[`docs/DEVELOPMENT.md`](./docs/DEVELOPMENT.md)** を参照。
 
-### かんたん起動（推奨）
+### 環境変数
 
-```bash
-./run.sh
+| 変数 | 説明 |
+| --- | --- |
+| `ANTHROPIC_API_KEY` | Claude APIキー（サーバー専用・必須） |
+| `ANTHROPIC_CHAT_MODEL` | （任意）チャット用モデルID。未設定時は既定値 |
+
+`.env` は **コミットしない**（`.gitignore` 済み）。本番は Vercel の環境変数に設定します。
+
+## スクリプト
+
+| コマンド | 内容 |
+| --- | --- |
+| `npm run dev` | 開発サーバー |
+| `npm run build` | 本番ビルド |
+| `npm run start` | 本番起動 |
+| `npm run lint` | ESLint |
+| `npm run typecheck` | 型チェック |
+
+## デプロイ
+
+`git push` で Vercel が自動デプロイ。Vercel に環境変数を設定してください。
+初めての方向けの丁寧な手順は **[`docs/DEPLOY.md`](./docs/DEPLOY.md)** を参照。
+
+## ディレクトリ
+
+```
+app/page.tsx          チャットUI（クライアント）
+app/api/chat/route.ts チャット応答API（サーバー）
+lib/chat.ts           チャネル非依存の応答ロジック
+lib/claude.ts         Anthropic クライアント
+lib/kb.ts             KBの読み込み・組み立て
+lib/prompts.ts        システムプロンプト
+data/faq.json         FAQ知識ベース（正本・30項目）
 ```
 
-`run.sh` は venv 作成 → 依存インストール → ingest → uvicorn 起動を一括で行います。
-初回は `.env` が無ければ `.env.example` がコピーされるので、`ANTHROPIC_API_KEY` を設定してください。
+## 会話ログ（任意）
 
-### 手動起動
+Google スプレッドシートへ1往復ずつ会話ログを保存できます（カテゴリ・言語を自動付与）。
+GAS Web App 経由で、環境変数 `SHEETS_WEBAPP_URL` / `SHEETS_WEBAPP_TOKEN` を設定すると有効化。
+設定手順は **[`docs/SHEETS_LOGGING.md`](./docs/SHEETS_LOGGING.md)** を参照。
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+## ロードマップ
 
-cp .env.example .env        # ANTHROPIC_API_KEY を設定
-python app/backend/ingest.py
-uvicorn app.backend.server:app --reload --port 8000
-```
-
-ブラウザで http://127.0.0.1:8000 を開きます。
-
-### 動作確認
-
-規程の件数が返ることを確認します。
-
-```bash
-curl -s http://127.0.0.1:8000/api/health
-# => {"status":"ok","document_count":7,"total_characters":9588, ...}
-```
-
-## 環境変数
-
-| 変数 | 必須 | 既定 | 説明 |
-|------|------|------|------|
-| `ANTHROPIC_API_KEY` | ○ | — | Anthropic の API キー |
-| `APP_PASSWORD` | — | （空） | 簡易パスワード。未設定なら誰でも利用可 |
-| `MODEL` | — | `claude-opus-4-6` | 使用モデル |
-| `MAX_TOKENS` | — | `2048` | 1 回の応答の最大トークン数 |
-
-`APP_PASSWORD` を設定すると、画面下部にパスワード入力欄が表示され、`/api/chat` 呼び出し時に
-`X-App-Password` ヘッダで照合します。
-
-## デモの見せ方
-
-1. 画面上部の「**DEMO / サンプルデータ**」バッジで、サンプルデータであることを明示。
-2. 例質問ボタンから代表的な質問をワンクリックで投入できます。
-   - 「有給休暇は入社後いつから何日もらえますか？」→ 休暇・休業規程 第4条 を根拠に回答
-   - 「定年は何歳ですか？」→ 就業規則 第11条 を根拠に回答
-   - 「副業は認められていますか？」→ 副業・兼業規程 を根拠に回答
-3. 規程に無い質問（例: 「社員食堂のメニューは？」）を投げると、推測せず「不明」と回答することを
-   示せます。これがハルシネーション抑制の訴求ポイントです。
-4. 回答に**規程名・条番号**が付くため、根拠の追跡性（監査対応）をアピールできます。
-
-## Vercel へのデプロイ
-
-`@vercel/python` を用いて `api/index.py` で FastAPI アプリを公開します。
-`vercel.json` の `includeFiles: app/**` により規程・フロントを同梱します。
-
-1. このリポジトリを Vercel に接続。
-2. Environment Variables に `ANTHROPIC_API_KEY`（必要なら `APP_PASSWORD` / `MODEL` / `MAX_TOKENS`）を設定。
-3. デプロイ。`corpus.json` が無い場合は起動時に自動生成されます。
-
-## ライセンス / 注意
-
-本デモのサンプル規程は一般的・無難な内容のダミーであり、法的助言ではありません。
-実際の就業規則の整備・運用は、必ず専門家にご相談ください。
+- **Phase 2**: 会話ログ保存（スプレッドシート版・実装済み）→ カテゴリ分類・日次AIレポート（Prisma + PostgreSQL + Vercel Cron）
+- **Phase 3**: LINEチャネル対応・職員通知
